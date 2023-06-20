@@ -1,0 +1,17 @@
+.newsbl {
+  background-image: url('../img/sparks/sparks-newsbl.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: top;
+  .heading {
+    margin-bottom: 60px;
+  }
+  .section-title {
+    .neon {
+      margin-left: 150px;
+    }
+    .number {
+      top: 55%;
+    }
+  }
+}

@@ -1,0 +1,31 @@
+.recom {
+  .heading-row {
+    .section-text {
+      text-align: right;
+      margin-left: 20px;
+      margin-top: 10px;
+    }
+  }
+  .section-title {
+    .neon {
+      margin-left: 50px;
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .recom-grid {
+      width: calc(40% - 20px);
+    }
+    .card-big {
+      width: calc(50% - 20px);
+    }
+  }
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 60px 36px;
+  }
+}

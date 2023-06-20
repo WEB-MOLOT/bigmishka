@@ -1,0 +1,80 @@
+.benefits {
+  position: relative;
+  padding-bottom: 80px;
+  background-image: url('../img/sparks/sparks-benefits.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  &::before {
+    content: '';
+    position: absolute;
+    left: -600px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1200px;
+    height: 1200px;
+    background-image: url('../img/sparks/blur-ellipse.png');
+    background-size: contain;
+    opacity: 0.7;
+    z-index: -1;
+  }
+  .section-title {
+    .neon {
+      margin-left: 50px;
+    }
+  }
+  &-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-auto-columns: 1fr;
+    gap: 36px 36px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "one . two two"
+      ". three four ."
+      "five six . seven";
+    .one { grid-area: one; }
+    .two { grid-area: two; }
+    .three { grid-area: three; }
+    .four { grid-area: four; }
+    .five { grid-area: five; }
+    .six { grid-area: six; }
+    .seven { grid-area: seven; }
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 15px 24px 15px;
+    width: 100%;
+    height: 100%;
+    border-radius: 30px;
+    border: 1px solid rgba(194, 126, 33, 0.5);
+    background: rgba(251, 217, 105, 0.02);
+    backdrop-filter: blur(7.5px);
+    &.mramor {
+      background-image: url('../img/mramor.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    }
+    img {
+      width: 20px;
+      height: 20px;
+      margin-bottom: 15px;
+    }
+    p {
+      margin-top: 20px;
+      margin-bottom: 0;
+      font-weight: 400;
+      font-size: 17px;
+      line-height: 1.2;
+      color: var(--font-color);
+      span {
+        font-weight: 700;
+      }
+    }
+    .link-lg {
+      margin-top: 20px;
+    }
+  }
+}

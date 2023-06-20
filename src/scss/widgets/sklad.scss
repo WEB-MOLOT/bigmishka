@@ -1,0 +1,104 @@
+.sklad {
+  position: relative;
+  background-image: url('../img/sparks/sparks-sklad.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: top;
+  &::before {
+    content: '';
+    position: absolute;
+    right: -600px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1200px;
+    height: 1200px;
+    background-image: url('../img/sparks/blur-ellipse.png');
+    background-size: contain;
+    opacity: 0.8;
+    z-index: -1;
+  }
+  .heading {
+    margin-bottom: 72px;
+  }
+  .section-title {
+    .neon {
+      margin-left: 90px;
+    }
+    .number {
+      top: 55%;
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 96px;
+  }
+  &-img {
+    width: calc(50% - 20px);
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    img {
+      width: 100%;
+      border-radius: 10px;
+      aspect-ratio: 56 / 38;
+      object-fit: cover;
+    }
+  }
+  &-content {
+    width: calc(50% - 20px);
+    p {
+      margin-top: 0;
+      margin-bottom: 24px;
+      font-size: 18px;
+      line-height: 1.5;
+    }
+  }
+  &-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .title-m1 {
+      width: 50%;
+      margin-bottom: 36px;
+    }
+    .link-lg {
+      margin-bottom: 36px;
+    }
+  }
+}
+
+.steps {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  @include list-reset;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 22px 0;
+    width: 100%;
+    border-bottom: 1px solid #444444;
+    &:first-child {
+      border-top: 1px solid #444444;
+    }
+    >span {
+      width: 80px;
+      margin-right: 20px;
+      font-weight: 400;
+      font-size: 30px;
+      line-height: 1;
+      @include gold-gradient-text;
+    }
+    p {
+      width: calc(100% - 100px);
+      margin: 0;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 1.4;
+      color: var(--font-color);
+    }
+  }
+}
