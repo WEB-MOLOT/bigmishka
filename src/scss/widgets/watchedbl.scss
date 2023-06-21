@@ -1,0 +1,19 @@
+.watchedbl {
+  padding-bottom: 80px;
+  background-image: url('../img/sparks/sparks-newsbl.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: top;
+  .section-title {
+    .neon {
+      margin-left: 80px;
+    }
+  }
+}
+
+.watchedblSwiper {
+  .swiper-nav {
+    margin-top: 0;
+    margin-bottom: 40px;
+  }
+}

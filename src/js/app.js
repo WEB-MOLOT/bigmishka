@@ -301,6 +301,15 @@ $(document).ready(function () {
 			prevEl: ".swiper-button-prev",
 		},
 	});
+	var watchedblSwiper = new Swiper(".watchedblSwiper", {
+		spaceBetween: 36,
+		slidesPerView: 4,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
 
 
 	var swiper = new Swiper(".mySwiper", {
