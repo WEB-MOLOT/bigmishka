@@ -72,8 +72,8 @@
 /***** COMPONENTS GLOBAL *****/
 @import "blocks/header";
 @import "blocks/footer";
-// @import "blocks/breadcrumbs";
-// @import "blocks/pagination";
+@import "blocks/breadcrumbs";
+@import "blocks/pagination";
 // @import "blocks/tags";
 // @import "blocks/scroll-container";
 // @import "blocks/accordion";
@@ -102,6 +102,7 @@
 @import "widgets/newsbl";
 @import "widgets/blogbl";
 @import "widgets/socbl";
+@import "widgets/catalog";
 
 /***** Page (article) *****/
 // @import "page/content";

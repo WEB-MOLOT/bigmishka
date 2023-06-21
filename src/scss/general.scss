@@ -47,10 +47,10 @@ section {
 }
 ::-webkit-scrollbar {
 	width: 0.375rem;
-	background: #fff;
+	background: var(--lightBlack-color);
 }
 ::-webkit-scrollbar-thumb {
-	background: #000000;
+	background: #000;
 	width: 0.375rem;
 	height: 18.75rem;
 	border-radius: 0.9375rem;

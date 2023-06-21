@@ -75,6 +75,31 @@ $(document).ready(function () {
 	}
 	navLink.forEach(n => n.addEventListener('click', linkAction));
 
+
+
+	/*=============== Accrodion ===============*/
+	const catSidebarItems = document.querySelectorAll('.catSidebar-item')
+	catSidebarItems.forEach((item) => {
+		const catSidebarHeader = item.querySelector('.catSidebar-title')
+		const catSidebarContent = item.querySelector('.catSidebar-group')
+		catSidebarContent.style.height = catSidebarContent.scrollHeight + 'px'
+		item.classList.add('catSidebar-item-open')
+		catSidebarHeader.addEventListener('click', () => {
+			catSidebartoggleItem(item)
+		})
+	})
+	const catSidebartoggleItem = (item) => {
+		const catSidebarContent = item.querySelector('.catSidebar-group')
+		if (item.classList.contains('catSidebar-item-open')) {
+			catSidebarContent.removeAttribute('style')
+			item.classList.remove('catSidebar-item-open')
+		} else {
+			catSidebarContent.style.height = catSidebarContent.scrollHeight + 'px'
+			item.classList.add('catSidebar-item-open')
+		}
+	}
+
+
 	// --------------------- Tabs ---------------------------
 	var tab = $('#tabs .tabs-items > div');
 	tab.hide().filter(':first').show();

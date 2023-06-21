@@ -1,0 +1,128 @@
+.catalog {
+  &-head {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    width: 100%;
+    .kama_breadcrumbs {
+      padding: 0 20px 0 0;
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .catSidebar {
+      width: 260px;
+      min-width: 260px;
+    }
+  }
+  &-right {
+    width: calc(100% - 260px - 40px);
+  }
+  &-cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 54px 36px;
+  }
+}
+
+
+.catSidebar {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 20px 12px;
+  border-radius: 15px;
+  border: 1px solid #C9A869;
+  background: linear-gradient(114.33deg, #292929 0%, #141414 100%);
+  &-title {
+    margin-top: 0;
+    margin-bottom: 0;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding-right: 20px;
+    width: 100%;
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 1.2;
+    color: var(--font-color);
+    cursor: pointer;
+    &::before {
+      content: '\e900';
+      position: absolute;
+      top: 3px;right: 0;
+      width: 16px;
+      height: 16px;
+      font-family: 'icomoon';
+      font-size: 16px;
+      line-height: 1;
+      color: var(--font-color);
+      transform: rotate(90deg);
+      transition: .3s;
+    }
+  }
+  &-item {
+    &:not(:last-child) {
+      padding-bottom: 16px;
+      border-bottom: 1px solid #BBBBBB;
+      margin-bottom: 16px;
+    }
+    &-open {
+      .catSidebar-group {
+        margin-top: 16px;
+      }
+      .catSidebar-title::before {
+        transform: rotate(-90deg);
+      }
+    }
+  }
+  &-group {
+    overflow: hidden;
+    height: 0;
+    transition: all .25s ease;
+  }
+  // &-price-range {
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   position: relative;
+  //   width: 100%;
+  //   &::before {
+  //     content: '';
+  //     position: absolute;
+  //     top: 50%;
+  //     left: 50%;
+  //     transform: translate(-50%, -50%);
+  //     width: 14px;
+  //     height: 2px;
+  //     border-radius: 3px;
+  //     background-color: var(--grey-color);
+  //   }
+  //   .form-label {
+  //     width: calc(50% - 12px);
+  //   }
+  // }
+  &-list {
+    @include list-reset;
+    li {
+      margin-top: 0;
+      margin-bottom: 0;
+      &:not(:last-child) {
+        margin-bottom: 7px;
+      }
+      a {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 1.2;
+        color: var(--font-color);
+        &:hover {
+          color: var(--gold-color);
+        }
+      }
+    }
+  }
+}
