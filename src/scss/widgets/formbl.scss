@@ -1,0 +1,27 @@
+.formbl {
+  .default-wrapper {
+    padding: 48px 60px 72px 60px;
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .heading {
+      width: calc(60% - 20px);
+      .section-text {
+        margin-top: 48px;
+        max-width: 540px;
+        font-size: 18px;
+      }
+    }
+    .col {
+      width: calc(40% - 20px);
+      .title-m2 {
+        margin-bottom: 16px;
+        font-size: 17px;
+        text-transform: none;
+      }
+    }
+  }
+}

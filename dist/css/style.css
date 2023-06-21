@@ -1527,6 +1527,8 @@ th {
 }
 .form-group {
   position: relative;
+  width: 100%;
+  margin-bottom: 24px;
 }
 .form label {
   display: block;
@@ -1560,6 +1562,38 @@ th {
   color: var(--white-color);
 }
 .form-input:focus:-ms-input-placeholder {
+  color: var(--white-color);
+}
+.form textarea {
+  resize: vertical;
+  width: 100%;
+  height: 120px;
+  padding: 19px 28px;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 22px;
+  color: #ECE8E1;
+  box-sizing: border-box;
+  border-radius: 15px;
+  border: 0;
+  outline: none;
+  background: #2D2D2D;
+  transition: 0.3s ease;
+}
+.form textarea:focus {
+  /* Firefox 19+ */
+  /* Firefox 18- */
+}
+.form textarea:focus::-webkit-input-placeholder {
+  color: var(--white-color);
+}
+.form textarea:focus::-moz-placeholder {
+  color: var(--white-color);
+}
+.form textarea:focus:-moz-placeholder {
+  color: var(--white-color);
+}
+.form textarea:focus:-ms-input-placeholder {
   color: var(--white-color);
 }
 
@@ -1611,7 +1645,13 @@ th {
 .form-subs .form-group .btn-reset:hover {
   color: var(--gold-color);
 }
-.form-subs .checkbox span {
+
+.formbl-form .link-lg {
+  margin-top: 24px;
+}
+
+.form-subs .checkbox span,
+.formbl-form .checkbox span {
   padding: 0 0 0 23px;
   font-weight: 300;
   font-size: 12px;
@@ -2509,6 +2549,32 @@ th {
 .watchedblSwiper .swiper-nav {
   margin-top: 0;
   margin-bottom: 40px;
+}
+
+.formbl .default-wrapper {
+  padding: 48px 60px 72px 60px;
+}
+.formbl-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  width: 100%;
+}
+.formbl-container .heading {
+  width: calc(60% - 20px);
+}
+.formbl-container .heading .section-text {
+  margin-top: 48px;
+  max-width: 540px;
+  font-size: 18px;
+}
+.formbl-container .col {
+  width: calc(40% - 20px);
+}
+.formbl-container .col .title-m2 {
+  margin-bottom: 16px;
+  font-size: 17px;
+  text-transform: none;
 }
 
 /***** Page (article) *****/
