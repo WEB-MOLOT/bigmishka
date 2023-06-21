@@ -30,6 +30,8 @@
 <link href="css/fancybox.min.css" type="text/css" rel="stylesheet">
 <!-- SWIPER -->
 <link href="css/swiper-bundle.min.css" rel="stylesheet">
+<!-- SELECT2 -->
+<link rel="stylesheet" href="css/select2.min.css">
 <link href="css/style.min.css" type="text/css" rel="stylesheet">
 </head>
 
@@ -118,7 +120,7 @@
   <div class="container">
     <div class="heading">
       <div class="section-title">
-        <div class="neon" data-text="Краски">Краски</div>
+        <div class="neon" data-text="Каталог">Каталог</div>
       </div>
     </div>
     <div class="catalog-head">
@@ -127,6 +129,13 @@
         <span class="kb_sep"><i class="icomoon icon-chevron"></i></span>
         <span class="kb_title">Все товары</span>
       </div>
+      <form class="woocommerce-ordering" method="get">
+        <select name="orderby" id="orderby" class="orderby js-example-basic-single">
+          <option value="popularity" selected="selected">По популярности</option>
+          <option value="rating">Sort by average rating</option>
+          <option value="date">Sort by latest</option>
+        </select>
+      </form>
     </div>
     <div class="catalog-container">
       <div class="catSidebar">
@@ -162,7 +171,25 @@
             <h4 class="catSidebar-title">Цена</h4>
             <div class="catSidebar-group">
               <div class="catSidebar-values">
-                
+                <div class="catSidebar-price">
+                  <div class="form-group">
+                    <label for="" class="form-label">
+                      <div class="wallet">€</div>
+                      <input type="number" class="form-input" min="0,00" placeholder="0,00">
+                    </label>
+                  </div>
+                  <div class="form-group">
+                    <label for="" class="form-label">
+                      <div class="wallet">€</div>
+                      <input type="number" class="form-input" max="9999,00" placeholder="9999,00">
+                    </label>
+                  </div>
+                </div>
+                <div class="range">
+                  <div class="range-button range-button-min"></div>
+                  <div class="range-line"></div>
+                  <div class="range-button range-button-max"></div>
+                </div>
               </div>
             </div>
           </div>
@@ -740,7 +767,8 @@
 <!-- Swiper JS -->
 <script src="js/swiper-bundle.min.js"></script>
 <script src="js/jquery.fancybox.min.js"></script>
-<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+<!-- <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script> -->
+<script src="js/select2.min.js"></script>
 <script src="js/app.min.js"></script>
 
 </body>

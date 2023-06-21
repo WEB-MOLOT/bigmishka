@@ -474,15 +474,17 @@ $(document).ready(function () {
 		});
 	});
 
-	const player = new Plyr('#player');
-
 	// ------------- Show More ---------------------
-	$("article.style-desc").has("p:nth-child(1)").append('<div class="more"><span>Узнать больше</span><img src="img/icons/next.svg" alt=""></div>');
-	$("article.style-desc .more").click(function () {
-		var $this = $(this),
-			$cards = $(this).closest('.style-desc');
-		$cards.toggleClass('open');
-		$this.find('span').html($cards.hasClass('open') ? 'Свернуть' : 'Узнать больше')
+	// select 2
+	jQuery('.js-example-basic-single').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+	});
+	jQuery('#orderby').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		// containerCssClass: "select-style",
+		// customClass: "select-style",
 	});
 
 	//end

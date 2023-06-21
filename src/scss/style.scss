@@ -128,6 +128,36 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-message:before {
+  content: "\e916";
+}
+.icon-bag2:before {
+  content: "\e90f";
+}
+.icon-eye:before {
+  content: "\e911";
+}
+.icon-filter:before {
+  content: "\e912";
+}
+.icon-gift:before {
+  content: "\e913";
+}
+.icon-grid:before {
+  content: "\e914";
+}
+.icon-download:before {
+  content: "\e910";
+}
+.icon-heart-solid:before {
+  content: "\e915";
+}
+.icon-minus:before {
+  content: "\e917";
+}
+.icon-plus:before {
+  content: "\e918";
+}
 .icon-arrow:before {
   content: "\e900";
 }
@@ -173,5 +203,3 @@
 .icon-zoom:before {
   content: "\e90e";
 }
-
-
