@@ -1,0 +1,218 @@
+.contacts {
+  .heading {
+    margin-bottom: 72px;
+  }
+  .section-title {
+    .default {
+      margin-left: 100px;
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .col {
+      &:nth-child(1) {
+        width: calc(70% - 20px);
+      }
+      &:nth-child(2) {
+        width: calc(30% - 20px);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        .socials {
+          margin-bottom: 36px;
+        }
+      }
+    }
+  }
+  &-items {
+    font-size: 17px;
+    font-weight: 400;
+    color: #ECE8E1;
+    text-transform: uppercase;
+    p {
+      margin-top: 0;
+      margin-bottom: 4px;
+    }
+    &-big {
+      font-size: 40px;
+      font-weight: 500;
+      color: #ECE8E1;
+      text-transform: uppercase;
+      a {
+        margin-bottom: 14px;
+        width: 100%;
+        display: inline-flex;
+      }
+      p {
+        margin-top: 0;
+        margin-bottom: 14px;
+      }
+    }
+    a:hover,
+    &-big a:hover {
+      color: var(--gold-color);
+    }
+  }
+}
+
+.team {
+  .heading {
+    margin-bottom: 84px;
+  }
+  .section-title {
+    margin-left: auto;
+    .default {
+      margin-left: auto;
+      margin-right: 100px;
+    }
+    .neon {
+      margin-left: auto;
+    }
+  }
+  &-cards {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  &-card {
+    display: flex;
+    flex-direction: column;
+    width: 32%;
+    margin-right: 12%;
+    &:nth-child(1n) {
+      margin-bottom: 6%;
+    }
+    &:nth-child(2n) {
+      margin-top: 6%;
+    }
+    &:nth-child(3n) {
+      margin-left: 12%;
+    }
+  }
+  &-img {
+    width: 100%;
+    aspect-ratio: 36 / 43;
+    object-fit: cover;
+    border-radius: 30px;
+    box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+  }
+  &-info {
+    width: 100%;
+    margin-bottom: 20px;
+    .row {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: nowrap;
+      width: 100%;
+      line-height: 1.35;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+      .col {
+        color: var(--font-color);
+        width: calc(50% - 8px);
+        &:nth-child(1) {
+          font-size: 18px;
+        }
+        &:nth-child(2) {
+          text-align: right;
+          font-size: 17px;
+          font-style: italic;
+        }
+      }
+      &:nth-child(2) {
+        .col {
+          color: #8B8B8B;
+          &:nth-child(1) {
+            font-size: 14px;
+          }
+          &:nth-child(2) {
+            font-size: 17px;
+            font-style: italic;
+          }
+        }
+      }
+    }
+  }
+}
+
+.magazine {
+  &-grid {
+    width: 100%;
+    &:not(:last-child) {
+      margin-bottom: 96px;
+    }
+    .row {
+      &:not(:last-child) {
+        margin-bottom: 70px;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 50px 80px;
+        font-size: 18px;
+        line-height: 1.4;
+        color: #ECE8E1;
+        text-transform: uppercase;
+        img {
+          width: 100%;
+          aspect-ratio: 36 / 43;
+          object-fit: cover;
+          border-radius: 30px;
+          box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+        }
+      }
+      &:nth-child(1) {
+        .col {
+          width: 74%;
+          img {
+            aspect-ratio: 86 / 43;
+          }
+        }
+      }
+      &:nth-child(2) {
+        .col {
+          width: 32%;
+          &:nth-child(1) {
+            margin-right: 24%;
+            img {
+              aspect-ratio: 36 / 23;
+            }
+          }
+        }
+      }
+      &:nth-child(3) {
+        max-width: 80%;
+        margin-left: 7.5%;
+        .col {
+          justify-content: space-between;
+          flex-direction: row;
+          img {
+            width: 52%;
+            aspect-ratio: 49 / 31;
+          }
+          .text {
+            width: 39%;
+          }
+        }
+      }
+    }
+  }
+}
+
+.map {
+  width: 100%;
+  height: 560px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
+}
+.ymaps-2-1-79-map,
+.ymaps-2-1-79-inner-panes {
+  border-radius: 30px;
+}

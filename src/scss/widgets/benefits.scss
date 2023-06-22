@@ -17,11 +17,6 @@
     opacity: 0.7;
     z-index: -1;
   }
-  .section-title {
-    .neon {
-      margin-left: 50px;
-    }
-  }
   &-cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -29,10 +24,6 @@
     grid-auto-columns: 1fr;
     gap: 36px 36px;
     grid-auto-flow: row;
-    grid-template-areas:
-      "one . two two"
-      ". three four ."
-      "five six . seven";
     .one { grid-area: one; }
     .two { grid-area: two; }
     .three { grid-area: three; }
@@ -75,6 +66,32 @@
     }
     .link-lg {
       margin-top: 20px;
+    }
+  }
+  &-first {
+    .section-title {
+      .neon {
+        margin-left: 50px;
+      }
+    }
+    .benefits-cards {
+      grid-template-areas:
+        "one . two two"
+        ". three four ."
+        "five six . seven";
+    }
+  }
+  &-second {
+    .section-title {
+      .default {
+        margin-left: 100px;
+      }
+    }
+    .benefits-cards {
+      grid-template-areas:
+        "one two . ."
+        ". three four five"
+        ". six . seven";
     }
   }
 }

@@ -2,7 +2,6 @@ $(document).ready(function () {
 
 	
 	// Marquee
-
 	function Marquee(selector, speed) {
 		const block = document.querySelector(selector);
 		if (block) {
@@ -30,29 +29,16 @@ $(document).ready(function () {
 	let searchHiddenInput = document.querySelector("#searchHiddenInput");
 	let searchToggleBtn = document.querySelector("#searchToggleBtn");
 	let searchBarLabel = document.querySelector("#searchBarLabel");
-
 	searchToggleBtn.addEventListener("click", () => {
 		searchBarLabel.classList.toggle("active");
 		searchHiddenInput.focus();
 	});
-
-
-	// -------------------- header --------------------------
-	// $(window).scroll(function () {
-	// 	if ($(this).scrollTop() > 10000) {
-	// 		$('header').addClass('active');
-	// 	}
-	// 	else {
-	// 		$('header').removeClass('active');
-	// 	}
-	// });
 
 	// -------------------- burger --------------------------
 	const navMenu = document.getElementById('nav-menu'),
 		navToggle = document.getElementById('nav-toggle'),
 		navClose = document.getElementById('nav-close'),
 		body = document.querySelector('body');
-
 	/*===== MENU SHOW =====*/
 	if (navToggle) {
 		navToggle.addEventListener('click', () => {
@@ -60,7 +46,6 @@ $(document).ready(function () {
 			body.classList.add('dis-scroll');
 		})
 	}
-
 	/*===== MENU HIDDEN =====*/
 	if (navClose) {
 		navClose.addEventListener('click', () => {
@@ -68,10 +53,8 @@ $(document).ready(function () {
 			body.classList.remove('dis-scroll');
 		})
 	}
-
 	/*=============== REMOVE MENU MOBILE ===============*/
 	const navLink = document.querySelectorAll('.nav__link')
-
 	const linkAction = () => {
 		const navMenu = document.getElementById('nav-menu')
 		navMenu.classList.remove('show-menu');
@@ -454,32 +437,6 @@ $(document).ready(function () {
 
 	});
 
-
-
-
-
-	var swiper2 = new Swiper(".mySwiper2", {
-		spaceBetween: 10,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-		thumbs: {
-			swiper: swiper,
-		},
-	});
-
-	// Scroll-container
-	var swiperScroll = new Swiper(".scroll-container", {
-		direction: "vertical",
-		slidesPerView: "auto",
-		freeMode: true,
-		scrollbar: {
-			el: ".swiper-scrollbar",
-		},
-		mousewheel: true,
-	});
-
 	// -------------------------modal----------------------
 	$('.to-state').on('click', function (event) {
 		event.preventDefault();
@@ -502,7 +459,6 @@ $(document).ready(function () {
 		});
 	});
 
-	// ------------- Show More ---------------------
 	// select 2
 	jQuery('.js-example-basic-single').select2({
 		minimumResultsForSearch: Infinity,

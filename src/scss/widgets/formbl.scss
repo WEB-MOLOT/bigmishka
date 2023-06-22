@@ -2,6 +2,11 @@
   .default-wrapper {
     padding: 48px 60px 72px 60px;
   }
+  .section-title {
+    .neon {
+      margin-left: 40px;
+    }
+  }
   &-container {
     display: flex;
     align-items: flex-start;
@@ -13,6 +18,7 @@
         margin-top: 48px;
         max-width: 540px;
         font-size: 18px;
+        line-height: 1.4;
       }
     }
     .col {

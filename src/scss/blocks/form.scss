@@ -189,6 +189,19 @@
 	}
 }
 
+.form-wrapper {
+	width: 100%;
+  .title-m3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+	.section-text {
+		font-size: 18px;
+	}
+  .form {
+    margin-top: 36px;
+  }
+}
 .form-subs {
 	.form-group {
 		.btn-reset {
@@ -213,7 +226,6 @@
 }
 .prodfaq-form {
 	.row {
-		display: flex;
 		align-items: flex-start;
 		justify-content: space-between;
 		width: 100%;
@@ -232,8 +244,24 @@
 		}
 	}
 }
+.educbl-form {
+	.row {
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+		.form-group {
+			width: calc(25% - 15px);
+		}
+		.link-lg {
+			margin-left: 20px;
+			width: calc(25% - 15px);
+			height: 60px;
+		}
+	}
+}
 .form-subs,
-.formbl-form {
+.formbl-form,
+.educbl-form {
 	.checkbox {
 		span {
 			padding: 0 0 0 23px;
