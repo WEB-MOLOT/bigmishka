@@ -1,0 +1,27 @@
+.complectbl {
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .heading {
+      margin-top: 60px;
+      width: calc(41% - 20px);
+      .section-title {
+        .neon {
+          margin-left: 30px;
+        }
+      }
+    }
+    .complectblSwiper {
+      width: calc(50% - 20px);
+      margin-right: 0;
+    }
+  }
+  &Swiper {
+    .swiper-nav {
+      margin-top: 0;
+      margin-bottom: 40px;
+    }
+  }
+}

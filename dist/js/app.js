@@ -2,22 +2,26 @@ $(document).ready(function () {
 
 	
 	// Marquee
-	function Marquee(selector, speed) {
-		const parentSelector = document.querySelector(selector);
-		const clone = parentSelector.innerHTML;
-		const firstElement = parentSelector.children[0];
-		let i = 0;
-		console.log(firstElement);
-		parentSelector.insertAdjacentHTML('beforeend', clone);
-		parentSelector.insertAdjacentHTML('beforeend', clone);
 
-		setInterval(function () {
-			firstElement.style.marginLeft = `-${i}px`;
-			if (i > firstElement.clientWidth) {
-				i = 0;
-			}
-			i = i + speed;
-		}, 0);
+	function Marquee(selector, speed) {
+		const block = document.querySelector(selector);
+		if (block) {
+			const parentSelector = document.querySelector(selector);
+			const clone = parentSelector.innerHTML;
+			const firstElement = parentSelector.children[0];
+			let i = 0;
+			console.log(firstElement);
+			parentSelector.insertAdjacentHTML('beforeend', clone);
+			parentSelector.insertAdjacentHTML('beforeend', clone);
+
+			setInterval(function () {
+				firstElement.style.marginLeft = `-${i}px`;
+				if (i > firstElement.clientWidth) {
+					i = 0;
+				}
+				i = i + speed;
+			}, 0)
+		}
 	}
 	window.addEventListener('load', Marquee('.marquee', 0.2))
 
@@ -101,177 +105,167 @@ $(document).ready(function () {
 
 
 	// --------------------- Tabs ---------------------------
-	var tab = $('#tabs .tabs-items > div');
-	tab.hide().filter(':first').show();
-	// Клики по вкладкам.
-	$('#tabs .tabs-nav a').click(function () {
-		tab.hide();
-		tab.filter(this.hash).show();
-		$('#tabs .tabs-nav a').removeClass('active');
-		$(this).addClass('active');
-		return false;
-	}).filter(':first').click();
-	// Клики по якорным ссылкам.
-	$('.tabs-target').click(function () {
-		$('#tabs .tabs-nav a[href=' + $(this).attr('href') + ']').click();
-	});
-	// Отрытие вкладки из хеша URL
-	if (window.location.hash) {
-		$('#tabs-nav a[href=' + window.location.hash + ']').click();
-		window.scrollTo(0, $("#".window.location.hash).offset().top);
-	}
+	// var tab = $('#tabs .tabs-items > div');
+	// tab.hide().filter(':first').show();
+	// // Клики по вкладкам.
+	// $('#tabs .tabs-nav a').click(function () {
+	// 	tab.hide();
+	// 	tab.filter(this.hash).show();
+	// 	$('#tabs .tabs-nav a').removeClass('active');
+	// 	$(this).addClass('active');
+	// 	return false;
+	// }).filter(':first').click();
+	// // Клики по якорным ссылкам.
+	// $('.tabs-target').click(function () {
+	// 	$('#tabs .tabs-nav a[href=' + $(this).attr('href') + ']').click();
+	// });
+	// // Отрытие вкладки из хеша URL
+	// if (window.location.hash) {
+	// 	$('#tabs-nav a[href=' + window.location.hash + ']').click();
+	// 	window.scrollTo(0, $("#".window.location.hash).offset().top);
+	// }
 
-	// -------------------- Acordion -------------------------
-	$('.accordion-list > li > .answer').hide();
-	$('.accordion-list > li').click(function () {
-		if ($(this).hasClass("active")) {
-			$(this).removeClass("active").find(".answer").slideUp();
+	// -------------------- Acordion FAQ -------------------------
+	const accordionItems = document.querySelectorAll('.accordion-item')
+	accordionItems.forEach((item) => {
+		const accordionHeader = item.querySelector('.accordion-header')
+		accordionHeader.addEventListener('click', () => {
+			const openItem = document.querySelector('.accordion-open')
+			toggleItem(item)
+			if (openItem && openItem !== item) {
+				toggleItem(openItem)
+			}
+		})
+	})
+	const toggleItem = (item) => {
+		const accordionContent = item.querySelector('.accordion-content')
+		if (item.classList.contains('accordion-open')) {
+			accordionContent.removeAttribute('style')
+			item.classList.remove('accordion-open')
 		} else {
-			$(".accordion-list > li.active .answer").slideUp();
-			$(".accordion-list > li.active").removeClass("active");
-			$(this).addClass("active").find(".answer").slideDown();
+			accordionContent.style.height = accordionContent.scrollHeight + 'px'
+			item.classList.add('accordion-open')
 		}
-		return false;
-	});
+	}
 
 	// ----------------- onClick Dropdown -------------------
 	/*1. по клику на пункты верхнего меню открывать дропдаун
 		2. по клику (повторному) на эти пункты - закрывать дропдаун
 		3. по клику в любое место сайта, кроме меню - закрывать дропдаун*/
-	const menuBtns = document.querySelectorAll('.cldpd-btn');
-	const drops = document.querySelectorAll('.cldpd-content');
-	menuBtns.forEach(el => {
-		el.addEventListener('click', (e) => {
-			let currentBtn = e.currentTarget;
-			let drop = currentBtn.closest('.cldpd').querySelector('.cldpd-content');
-			menuBtns.forEach(el => {
-				if (el !== currentBtn) {
-					el.classList.remove('cldpd-btn--active');
-				}
-			});
-			drops.forEach(el => {
-				if (el !== drop) {
-					el.classList.remove('cldpd-content--active');
-				}
-			});
-			drop.classList.toggle('cldpd-content--active');
-			currentBtn.classList.toggle('cldpd-btn--active');
-		});
-	});
-	document.addEventListener('click', (e) => {
-		if (!e.target.closest('.cldpd')) {
-			menuBtns.forEach(el => {
-				el.classList.remove('cldpd-btn--active');
-			});
-			drops.forEach(el => {
-				el.classList.remove('cldpd-content--active');
-			});
-		}
-	});
+	// const menuBtns = document.querySelectorAll('.cldpd-btn');
+	// const drops = document.querySelectorAll('.cldpd-content');
+	// menuBtns.forEach(el => {
+	// 	el.addEventListener('click', (e) => {
+	// 		let currentBtn = e.currentTarget;
+	// 		let drop = currentBtn.closest('.cldpd').querySelector('.cldpd-content');
+	// 		menuBtns.forEach(el => {
+	// 			if (el !== currentBtn) {
+	// 				el.classList.remove('cldpd-btn--active');
+	// 			}
+	// 		});
+	// 		drops.forEach(el => {
+	// 			if (el !== drop) {
+	// 				el.classList.remove('cldpd-content--active');
+	// 			}
+	// 		});
+	// 		drop.classList.toggle('cldpd-content--active');
+	// 		currentBtn.classList.toggle('cldpd-btn--active');
+	// 	});
+	// });
+	// document.addEventListener('click', (e) => {
+	// 	if (!e.target.closest('.cldpd')) {
+	// 		menuBtns.forEach(el => {
+	// 			el.classList.remove('cldpd-btn--active');
+	// 		});
+	// 		drops.forEach(el => {
+	// 			el.classList.remove('cldpd-content--active');
+	// 		});
+	// 	}
+	// });
 	
 	//--------------- fancybox -----------
-	$('[data-fancybox-popup]').fancybox({
-		closeExisting: true,
-		smallBtn: false,
-		toolbar: false,
-		autoFocus: false,
-		hash: false,
-		touch: false
-	});
+	// $('[data-fancybox-popup]').fancybox({
+	// 	closeExisting: true,
+	// 	smallBtn: false,
+	// 	toolbar: false,
+	// 	autoFocus: false,
+	// 	hash: false,
+	// 	touch: false
+	// });
 
 	// FANCYBOX CERTIFICATE
 	// ====================
-	$('[data-fancybox-certificate]').fancybox({
-		transitionEffect: 'fade',
-		animationEffect: false,
-		clickContent: false,
-		touch: true,
-		loop: true,
-		selector: '.cert-item',
-		backFocus: false,
-		lang: 'ru',
-		hideScrollbar: false,
-		i18n: {
-			ru: {
-				CLOSE: 'Закрыть',
-				ZOOM: 'Увеличить',
-				FULL_SCREEN: 'На весь экран',
-			}
-		},
-		buttons: [
-			"zoom",
-			"fullScreen",
-			"close"
-		]
-	});
-	$('[data-fancybox-gallery]').fancybox({
-		transitionEffect: 'fade',
-		animationEffect: false,
-		clickContent: false,
-		touch: true,
-		loop: true,
-		selector: '.gal-img',
-		backFocus: false,
-		lang: 'ru',
-		hideScrollbar: false,
-		i18n: {
-			ru: {
-				CLOSE: 'Закрыть',
-				NEXT: 'Вперёд',
-				PREV: 'Назад',
-				FULL_SCREEN: 'На весь экран',
-			}
-		},
-		buttons: [
-			"fullScreen",
-			"close"
-		]
-	});
+	// $('[data-fancybox-certificate]').fancybox({
+	// 	transitionEffect: 'fade',
+	// 	animationEffect: false,
+	// 	clickContent: false,
+	// 	touch: true,
+	// 	loop: true,
+	// 	selector: '.cert-item',
+	// 	backFocus: false,
+	// 	lang: 'ru',
+	// 	hideScrollbar: false,
+	// 	i18n: {
+	// 		ru: {
+	// 			CLOSE: 'Закрыть',
+	// 			ZOOM: 'Увеличить',
+	// 			FULL_SCREEN: 'На весь экран',
+	// 		}
+	// 	},
+	// 	buttons: [
+	// 		"zoom",
+	// 		"fullScreen",
+	// 		"close"
+	// 	]
+	// });
+	// $('[data-fancybox-gallery]').fancybox({
+	// 	transitionEffect: 'fade',
+	// 	animationEffect: false,
+	// 	clickContent: false,
+	// 	touch: true,
+	// 	loop: true,
+	// 	selector: '.gal-img',
+	// 	backFocus: false,
+	// 	lang: 'ru',
+	// 	hideScrollbar: false,
+	// 	i18n: {
+	// 		ru: {
+	// 			CLOSE: 'Закрыть',
+	// 			NEXT: 'Вперёд',
+	// 			PREV: 'Назад',
+	// 			FULL_SCREEN: 'На весь экран',
+	// 		}
+	// 	},
+	// 	buttons: [
+	// 		"fullScreen",
+	// 		"close"
+	// 	]
+	// });
 
-	$('[data-fancybox="gallery"]').fancybox({
-		Thumbs: false,
-		Toolbar: false,
-		Image: {
-			zoom: false,
-			click: false,
-			wheel: "slide",
-		},
-		backFocus: false,
-		lang: 'ru',
-		hideScrollbar: false,
-		i18n: {
-			ru: {
-				CLOSE: 'Закрыть',
-				NEXT: 'Вперёд',
-				PREV: 'Назад',
-				FULL_SCREEN: 'На весь экран',
-			}
-		},
-		buttons: [
-			"fullScreen",
-			"close"
-		]
-	});
-
-	// -------------------- svg--------------------------
-	function svg() {
-		$('img[src$=".svg"]').each(function () {
-			var $img = $(this);
-			var imgURL = $img.attr('src');
-			var attributes = $img.prop('attributes');
-			if ($img.hasClass('svg')) {
-				$.get(imgURL, function (data) {
-					var $svg = jQuery(data).find('svg');
-					$svg = $svg.removeAttr('xmlns:a');
-					$.each(attributes, function () {
-						$svg.attr(this.name, this.value);
-					});
-					$img.removeClass('svg').replaceWith($svg);
-				}, 'xml');
-			}
-		});
-	}
-	svg();	
+	// $('[data-fancybox="gallery"]').fancybox({
+	// 	Thumbs: false,
+	// 	Toolbar: false,
+	// 	Image: {
+	// 		zoom: false,
+	// 		click: false,
+	// 		wheel: "slide",
+	// 	},
+	// 	backFocus: false,
+	// 	lang: 'ru',
+	// 	hideScrollbar: false,
+	// 	i18n: {
+	// 		ru: {
+	// 			CLOSE: 'Закрыть',
+	// 			NEXT: 'Вперёд',
+	// 			PREV: 'Назад',
+	// 			FULL_SCREEN: 'На весь экран',
+	// 		}
+	// 	},
+	// 	buttons: [
+	// 		"fullScreen",
+	// 		"close"
+	// 	]
+	// });
 
 	// ----------------- SWIPER ----------------------
 	var noveltySwiper = new Swiper(".noveltySwiper", {
@@ -308,6 +302,52 @@ $(document).ready(function () {
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
+		},
+	});
+	var similarblSwiper = new Swiper(".similarblSwiper", {
+		spaceBetween: 36,
+		slidesPerView: 4,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+	var recomblSwiper = new Swiper(".recomblSwiper", {
+		spaceBetween: 36,
+		slidesPerView: 4,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+	var complectblSwiper = new Swiper(".complectblSwiper", {
+		spaceBetween: 36,
+		slidesPerView: 2,
+		loop: true,
+		navigation: {
+			nextEl: ".swiper-button-next",
+			prevEl: ".swiper-button-prev",
+		},
+	});
+
+	var prodSecondSwiper = new Swiper(".prodSecondSwiper", {
+		loop: true,
+		spaceBetween: 16,
+		slidesPerView: 4,
+		freeMode: true,
+		watchSlidesProgress: true,
+	});
+	var prodFirstSwiper = new Swiper(".prodFirstSwiper", {
+		loop: true,
+		spaceBetween: 10,
+		navigation: {
+			nextEl: ".product-slider .swiper-button-next",
+			prevEl: ".product-slider .swiper-button-prev",
+		},
+		thumbs: {
+			swiper: prodSecondSwiper,
 		},
 	});
 
@@ -438,18 +478,6 @@ $(document).ready(function () {
 			el: ".swiper-scrollbar",
 		},
 		mousewheel: true,
-	});
-
-	// -------------------- Scroll -------------------------
-	$(".scrolls").on("click", "a", function (event) {
-		// исключаем стандартную реакцию браузера
-		event.preventDefault();
-		// получем идентификатор блока из атрибута href
-		var id = $(this).attr('href'),
-			// находим высоту, на которой расположен блок
-			top = $(id).offset().top - 50;
-		// анимируем переход к блоку, время: 800 мс
-		$('body,html').animate({ scrollTop: top }, 800);
 	});
 
 	// -------------------------modal----------------------

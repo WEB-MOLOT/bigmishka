@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Страница товара</title>
+  <title>Страница товара (нет на складе и разные состояния)</title>
 
   <!-- favicons -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/favicon.svg">
@@ -36,35 +36,6 @@
 </head>
 
 <body>
-
-  <!-- <div class="marquee">
-  <p class="img">Бесплатная доставка при заказе от €150 <span>/</span></p>
-</div> -->
-
-<!-- <div class="marquee-container">
-  <p class="marquee">
-    LONDON - PARIS - SYDNEY - TOKYO - NEW YORK - BERLIN - ROME
-  </p>
-</div> -->
-
-<!-- 
-  <marquee direction="left" bgcolor="var(--green-600);">
-    <p>Бесплатная доставка при заказе от €150<span>/</span>Бесплатная доставка при заказе от €150<span>/</span>Бесплатная доставка при заказе от €150<span>/</span>Бесплатная доставка при заказе от €150<span>/</span>Бесплатная доставка при заказе от €150<span>/</span>Бесплатная доставка при заказе от €150<span>/</span>Бесплатная доставка при заказе от €150<span>/</span></p>
-  </marquee> -->
-
-  <!-- <div class="marquee">
-    <div class="marquee-img"></div>
-    <div class="marquee-img"></div>
-  </div> -->
-
-
-  <!-- <div class="marquee">
-    <div id="marquee"><span>Бесплатная доставка при заказе от €150</span></div>
-  </div> -->
-
-  <div class="marquee">
-    <h1>Бесплатная доставка при заказе от €150</h1>
-  </div>
 
   <!-- header -->
 <header class="header">
@@ -162,8 +133,7 @@
           </div>
           <div class="group">
             <div class="col">
-              <button class="btn"><i class="icomoon icon-bag2"></i>В корзину</button>
-              <button type="button" class="btn-reset btn-oneklick">Купить в 1 клик</button>
+              <button class="btn disabled">Нет на складе</button>
             </div>
             <div class="col">
               <button class="btn-reset btn-second"><i class="icomoon icon-compare"></i>Сравнить</button>
@@ -174,7 +144,8 @@
       <div class="product-slider">
         <!-- Swiper -->
         <div class="swiper prodFirstSwiper">
-          <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
+          <div class="card-nalichie">Нет на складе</div>
+          <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
           <div class="card-discount"><img src="img/discount.svg" alt=""></div>
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="img/prod-img.jpg"></div>
@@ -210,7 +181,19 @@
   </div>
 </section>
 
-    obzorbl-disabled.html
+    <section class="obzorbl">
+  <div class="container">
+    <div class="obzorbl-container">
+      <a data-fancybox="video" class="video" href="https://youtu.be/jNQXAC9IVRw">
+        <div class="btn-play disabled"><img src="img/play-icon.svg" alt=""></div>
+        <img src="img/obzorbl-img.jpg">
+      </a>
+      <div class="heading">
+        <h3 class="title-m4">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; Посмотрите Видеообзор на этот товар, чтобы лучше изучить его</h3>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section class="prodinfobl">
   <div class="container">

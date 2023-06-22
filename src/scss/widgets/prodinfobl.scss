@@ -1,0 +1,45 @@
+.prodinfobl {
+  background-image: url('../img/sparks/sparks-prodinfobl.png');
+  background-size: 20% auto;
+  background-repeat: no-repeat;
+  background-position: top right;
+  .title-m2 {
+    font-weight: 300;
+    margin-top: 0;
+    margin-bottom: 26px;
+  }
+  .section-text {
+    font-size: 17px;
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+    .col {
+      ul {
+        list-style: none;
+        padding: 0;
+      }
+      &:nth-child(1) {
+        width: calc(50% - 20px);
+      }
+      &:nth-child(2) {
+        width: calc(41% - 20px);
+      }
+    }
+  }
+  .prodfaq {
+    margin-top: 60px;
+  }
+  .prodfaq-form-wrapper {
+    margin-top: 70px;
+    .title-m3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+    .prodfaq-form {
+      margin-top: 36px;
+    }
+  }
+}

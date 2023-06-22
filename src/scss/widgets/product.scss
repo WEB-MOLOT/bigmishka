@@ -1,0 +1,61 @@
+.product {
+  padding-top: 30px;
+  .kama_breadcrumbs {
+    margin-bottom: 48px;
+  }
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &-info {
+    padding-bottom: 30px;
+    width: calc(50% - 20px);
+    text-align: left;
+    .card-name {
+      font-family: var(--font-BernardoModaContrast);
+      font-size: 38px;
+      color: var(--font-color);
+      text-transform: uppercase;
+      text-align: left;
+      margin-bottom: 14px;
+    }
+    .card-text {
+      margin-top: 36px;
+      margin-bottom: 22px;
+      text-align: left;
+    }
+    .card-price {
+      gap: 20px;
+      .current {
+        font-size: 40px;
+      }
+      .old {
+        font-size: 30px;
+      }
+    }
+  }
+  &-slider {
+    width: calc(41% - 20px);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    .swiper {
+      max-width: 100%;
+      z-index: 0;
+      &-slide {
+        border-radius: 30px;
+        img {
+          border-radius: 30px;
+        }
+      }
+    }
+    .prodSecondSwiper {
+      margin-top: 15px;
+      .swiper-slide {
+        cursor: pointer;
+      }
+    }
+  }
+}

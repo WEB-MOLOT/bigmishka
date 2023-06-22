@@ -11,7 +11,33 @@
   }
 }
 
-.watchedblSwiper {
+.recombl {
+  .default-wrapper {
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+  .section-title {
+    .default {
+      margin-left: 100px;
+    }
+  }
+}
+
+.similarbl {
+  background-image: url('../img/sparks/sparks-newsbl.png');
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+  background-position-y: top;
+  .section-title {
+    .default {
+      margin-left: 100px;
+    }
+  }
+}
+
+.watchedblSwiper,
+.similarblSwiper,
+.recomblSwiper {
   .swiper-nav {
     margin-top: 0;
     margin-bottom: 40px;

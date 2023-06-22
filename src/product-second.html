@@ -4,22 +4,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Страница товара</title>
+  <title>Страница товара (нет на складе и разные состояния)</title>
 
   @@include('template/meta.html')
 </head>
 
 <body>
 
-  @@include('widgets/marquee.html')
-
   @@include('template/header.html')
 
   <main>
 
-    @@include('widgets/product.html')
+    @@include('widgets/product-second.html')
 
-    @@include('widgets/obzorbl.html')
+    @@include('widgets/obzorbl-disabled.html')
 
     @@include('widgets/prodinfobl.html')
 

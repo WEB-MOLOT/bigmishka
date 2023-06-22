@@ -1,0 +1,15 @@
+.obzorbl {
+  &-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .video {
+    width: calc(50% - 20px);
+  }
+  .heading {
+    width: calc(41% - 20px);
+  }
+  
+}
