@@ -1,34 +1,70 @@
 <!--------Modal-------->
 
-<div class="state" data-state="download">
+<div class="state" data-state="skidka">
 	<div class="state-box">
 		<div class="close"></div>
-		<div class="widget-title">Free download</div>
-		<div class="section-title">Guest Posting Workbook</div>
-		<form class="forma" action="">
-			<label class="wide-row" for="">
-				<input type="text" class="form-input" value="" placeholder="Your name">
-			</label>
-			<label class="wide-row" for="">
-				<input type="email" class="form-input" value="" placeholder="Email">
-			</label>
-			<button type="submit" class="button button-global to-state" data-state="thanks">Download Now</button>
-			<!--с кнопки убрать класс to-state и data-state="thanks", они для демонстрации окна после отправки формы-->
-			<p class="acept center">By creating an account on Fastento, you acknowledge and agree to our <a href="">Terms of
-					Use</a>
-				and
-				<a href="">Privacy Policy</a>.
-			</p>
-		</form>
+		<div class="widget-title">Дарим скидку 10% за регистрацию</div>
+		<div class="widget-text">Всем новым клиентам скидка на первый заказ в&nbsp;интернет-магазине</div>
+		<a href="#" class="link-lg black to-state" data-state="register">Зарегистрироваться <i class="icomoon icon-arrow"></i></a>
+		<div class="state-bottom"><button class="btn-reset button-close">Закрыть</button></div>
 	</div>
 </div>
 
-<div class="state" data-state="thanks">
+
+<div class="state" data-state="login">
 	<div class="state-box">
 		<div class="close"></div>
-		<img src="img/thanks.svg" class="thanks-img" alt="">
-		<div class="section-title">Thanks!</div>
-		<p>The download will start automatically,<br> if this did not happen, then <a href="">click here</a>.</p>
-		<button class="button button-close">Close</button>
+		<div class="widget-title">Войти</div>
+		<form action="#" class="form form-light">
+			<div class="form-group">
+				<input type="email" class="form-input" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-input" placeholder="Пароль">
+				<a href="#">Не помню пароль</a>
+			</div>
+			<label for="loginPolitika" class="checkbox">
+				<input type="checkbox" id="loginPolitika">
+				<span>Я согласен с условиями <a href="#">политики конфиденциальности</a></span>
+			</label>
+			<button type="submit" class="btn-reset link-lg black">Войти<i class="icomoon icon-arrow"></i></button>
+		</form>
+		<div class="state-bottom">
+			<div class="widget-text">Еще нет аккаунта? <a href="#" class="to-state" data-state="register">Зарегистрируйтесь</a></div>
+		</div>
+	</div>
+</div>
+
+
+<div class="state" data-state="register">
+	<div class="state-box">
+		<div class="close"></div>
+		<div class="widget-title">Создать аккаунт</div>
+		<form action="#" class="form form-light">
+			<div class="form-group">
+				<input type="text" class="form-input" placeholder="Имя">
+			</div>
+			<div class="form-group">
+				<input type="text" class="form-input" placeholder="Фамилия">
+			</div>
+			<div class="form-group">
+				<input type="email" class="form-input" placeholder="Email">
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-input" placeholder="Пароль">
+			</div>
+			<label for="registerPolitika" class="checkbox">
+				<input type="checkbox" id="registerPolitika">
+				<span>Я согласен с условиями <a href="#">политики конфиденциальности</a></span>
+			</label>
+			<label for="registerRassilka" class="checkbox">
+				<input type="checkbox" id="registerRassilka">
+				<span>Я хочу получать рассылку о новинках, поступлениях и полезные статьи</span>
+			</label>
+			<button type="submit" class="btn-reset link-lg black">Зарегистрироваться<i class="icomoon icon-arrow"></i></button>
+		</form>
+		<div class="state-bottom">
+			<div class="widget-text">Уже есть аккаунт? <a href="#" class="to-state" data-state="login">Войдите</a></div>
+		</div>
 	</div>
 </div>

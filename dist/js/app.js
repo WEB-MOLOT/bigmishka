@@ -444,9 +444,15 @@ $(document).ready(function () {
 		$('.state').removeClass('active');
 		var state = $(this).attr('data-state');
 		$('.state[data-state=' + state + ']').addClass('active');
+		$('body').addClass('dis-scroll');
 	});
 	$('.close').on('click', function (event) {
 		$(this).parents().removeClass('active');
+		$('body').removeClass('dis-scroll');
+	});
+	$('.button-close').on('click', function (event) {
+		$(this).parents().removeClass('active');
+		$('body').removeClass('dis-scroll');
 	});
 	jQuery(function ($) {
 		$(document).mouseup(function (e) { // событие клика по веб-документу
@@ -454,7 +460,7 @@ $(document).ready(function () {
 			if (!div.is(e.target) // если клик был не по нашему блоку
 				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
 				div.parents().removeClass('active'); // скрываем его
-				$('body').removeClass('modal-open');
+				$('body').removeClass('dis-scroll');
 			}
 		});
 	});

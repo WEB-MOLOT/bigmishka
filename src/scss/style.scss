@@ -60,6 +60,12 @@
 	text-fill-color: var(--font-color);
 	color: var(--font-color);
 }
+@mixin gold-gradient-text-hover--black {
+	background: none;
+	-webkit-text-fill-color: var(--black-color);
+	text-fill-color: var(--black-color);
+	color: var(--black-color);
+}
 
 
 /***** BLOCKS GLOBAL *****/
@@ -87,7 +93,7 @@
 // @import "blocks/article";
 @import "blocks/sliders";
 @import "blocks/form";
-// @import "blocks/modal";
+@import "blocks/modal";
 
 /***** SECTIONS GLOBAL (Widgets) *****/
 @import "widgets/marquee";
@@ -111,6 +117,7 @@
 @import "widgets/complectbl";
 @import "widgets/educbl";
 @import "widgets/contacts";
+@import "widgets/contentbl";
 
 /***** Page (article) *****/
 // @import "page/content";

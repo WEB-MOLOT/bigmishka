@@ -112,6 +112,36 @@
 	}
 }
 
+.form-light {
+	.form-input,
+	textarea {
+		color: #838383;
+		background: #F0F0F0;
+		&:focus {
+			&::-webkit-input-placeholder {
+				color: var(--black-color);
+			}
+			&::-moz-placeholder {
+				color: var(--black-color);
+			} /* Firefox 19+ */
+			&:-moz-placeholder {
+				color: var(--black-color);
+			} /* Firefox 18- */
+			&:-ms-input-placeholder {
+				color: var(--black-color);
+			}
+		}
+	}
+	.checkbox {
+		span {
+			color: var(--black-color);
+		}
+		span:before {
+			border-color: var(--font-color);
+		}
+	}
+}
+
 .range {
   position: relative;
   display: block;
@@ -261,7 +291,8 @@
 }
 .form-subs,
 .formbl-form,
-.educbl-form {
+.educbl-form,
+.state .form {
 	.checkbox {
 		span {
 			padding: 0 0 0 23px;
