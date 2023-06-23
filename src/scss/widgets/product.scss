@@ -43,6 +43,7 @@
     position: relative;
     .swiper {
       max-width: 100%;
+      border-radius: 30px;
       z-index: 0;
       &-slide {
         border-radius: 30px;
@@ -51,11 +52,76 @@
         }
       }
     }
+    .prodFirstSwiper {
+      box-shadow: 5px 5px 15px 3px rgba(138, 138, 138, 0.20);
+    }
     .prodSecondSwiper {
       margin-top: 15px;
       .swiper-slide {
         cursor: pointer;
+        img {
+          // box-shadow: 5px 5px 5px 3px rgba(138, 138, 138, 0.10);
+          border: 1px solid rgba(138, 138, 138, 0.20);
+        }
+        &:hover {
+          img {
+            border: 1px solid var(--gold-color);
+          }
+        }
+        &.swiper-slide-thumb-active {
+          border: 1px solid var(--gold-color);
+        }
       }
     }
+  }
+}
+
+.prodView {
+  .message {
+    margin-top: -20px;
+    margin-bottom: 24px;
+  }
+  .product-info {
+    color: var(--black-color);
+    .card-name,
+    .card-text {
+      color: var(--black-color);
+    }
+    .card-price {
+      &-info {
+        color: #141414;
+        background: var(--white-color);
+      }
+    }
+    .card-charact {
+      .group {
+        .title {
+          color: var(--black-color);
+        }
+      }
+      .btn {
+        box-shadow: 5px 5px 20px 0px rgba(144, 87, 31, 0.40);
+      }
+      .btn-second {
+        color: var(--black-color);
+      }
+    }
+  }
+}
+
+.message {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  padding: 12px 20px;
+  font-size: 17px;
+  line-height: 1.3;
+  color: var(--black-color);
+  border-radius: 10px;
+  background: #C0EAB7;
+  i {
+    font-size: 16px;
+    margin-right: 20px;
   }
 }

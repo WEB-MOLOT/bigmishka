@@ -457,8 +457,12 @@ $(document).ready(function () {
 	jQuery(function ($) {
 		$(document).mouseup(function (e) { // событие клика по веб-документу
 			var div = $(".state-box"); // тут указываем ID элемента
-			if (!div.is(e.target) // если клик был не по нашему блоку
-				&& div.has(e.target).length === 0) { // и не по его дочерним элементам
+			var select = $(".select2-container");
+			if (!div.is(e.target)// если клик был не по нашему блоку
+				&& div.has(e.target).length === 0 // и не по его дочерним элементам
+				&& (!select.is(e.target)
+					&& select.has(e.target).length === 0
+				&& !$(e.target).closest('.select2-selection, .select2-search, .select2-container, .select2-results__option').length)) { // и не по элементам с классом select2-selection и select2-search
 				div.parents().removeClass('active'); // скрываем его
 				$('body').removeClass('dis-scroll');
 			}
