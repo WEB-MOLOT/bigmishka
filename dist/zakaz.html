@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Рассрочка</title>
+  <title>Подробности заказа</title>
 
   <!-- favicons -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/favicon.svg">
@@ -36,7 +36,7 @@
 </head>
 
 <body>
-  
+
   <!-- <div class="marquee">
   <p class="img">Бесплатная доставка при заказе от €150 <span>/</span></p>
 </div> -->
@@ -68,101 +68,180 @@
 
   <!-- header -->
 <header class="header">
-	<div class="container">
-		<div class="header-top">
-			<a href="/" class="logo">Bigmishka</a>
-			<div class="col">
-				<a href="tel:+37255532754" class="header-link">+(372) 5553 2754</a>
-				<a href="mailto:order@mishka.ink" class="header-link">order@mishka.ink</a>
-			</div>
-			<div class="col">
-				<a href="rassrochka.html" class="green-link" data-text="Рассрочка">Рассрочка</a>
-				<a href="studiam-i-masteram.html" class="green-link" data-text="Студиям и мастерам">Студиям и мастерам</a>
-			</div>
-			<div class="header-bar">
-				<div class="lang">
-					<div class="lang-active">
-						<div class="lang-item">EST</div>
-					</div>
-					<div class="lang-dropdown">
-						<div class="lang-item">RU</div>
-						<div class="lang-item">EN</div>
-					</div>
-				</div>
-				<div class="search-label" id="searchBarLabel">
-					<input class="search-input" id="searchHiddenInput" type="type" placeholder="Поиск" />
-					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-zoom"></i></button>
-				</div>
-				<a href="cart.html" class="btn-icon"><i class="icomoon icon-bag"></i></a>
-				<a href="#.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
-				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
-			</div>
-		</div>
-		<div class="header-menu">
-			<ul class="nav-list">
-				<li><a href="#">Новинки</a></li>
-				<li><a href="#">Краски</a></li>
-				<li><a href="#">PMU</a></li>
-				<li><a href="#">Картриджи</a></li>
-				<li><a href="#">Чистящие средства</a></li>
-				<li><a href="#">Аксессуары</a></li>
-				<li><a href="#">Мебель</a></li>
-				<li><a href="#">Оборудование</a></li>
-				<li><a href="#">Источники питания</a></li>
-			</ul>
-		</div>
-	</div>
+  <div class="container">
+    <div class="header-top">
+      <a href="/" class="logo">Bigmishka</a>
+      <div class="col">
+        <a href="tel:+37255532754" class="header-link">+(372) 5553 2754</a>
+        <a href="mailto:order@mishka.ink" class="header-link">order@mishka.ink</a>
+      </div>
+      <div class="col">
+        <a href="rassrochka.html" class="green-link" data-text="Рассрочка">Рассрочка</a>
+        <a href="studiam-i-masteram.html" class="green-link" data-text="Студиям и мастерам">Студиям и мастерам</a>
+      </div>
+      <div class="header-bar">
+        <div class="lang">
+          <div class="lang-active">
+            <div class="lang-item">EST</div>
+          </div>
+          <div class="lang-dropdown">
+            <div class="lang-item">RU</div>
+            <div class="lang-item">EN</div>
+          </div>
+        </div>
+        <div class="search-label" id="searchBarLabel">
+          <input class="search-input" id="searchHiddenInput" type="type" placeholder="Поиск" />
+          <button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-zoom"></i></button>
+        </div>
+        <a href="cart.html" class="btn-icon"><i class="icomoon icon-bag"></i></a>
+        <a href="#.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
+        <a href="lk.html" class="btn-icon"><i class="icomoon icon-user"></i></a>
+      </div>
+    </div>
+    <div class="header-menu">
+      <ul class="nav-list">
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Краски</a></li>
+        <li><a href="#">PMU</a></li>
+        <li><a href="#">Картриджи</a></li>
+        <li><a href="#">Чистящие средства</a></li>
+        <li><a href="#">Аксессуары</a></li>
+        <li><a href="#">Мебель</a></li>
+        <li><a href="#">Оборудование</a></li>
+        <li><a href="#">Источники питания</a></li>
+      </ul>
+    </div>
+  </div>
 </header>
 
   <main>
 
-    <section class="contentbl">
+    <section class="lk">
   <div class="container">
-    <div class="contentbl-container">
-      <div class="col">
-        <div class="heading">
-          <div class="section-title">
-            <div class="neon" data-text="Рассрочка">Рассрочка</div>
-            <div class="default">От ESTO</div>
-          </div>
+    <div class="lk-head">
+      <div class="lk-title">Заказ #849555738</div>
+      <button class="btn"><i class="icomoon icon-repeat"></i>Повторить</button>
+      <a href="zakazy.html" class="lk-link">Вернуться к истории заказов<i class="icomoon icon-sign-out"></i></a>
+    </div>
+    <div class="lk-section">
+      <div class="lk-text lk-method">Метод оплаты: Наличными при самовывозе</div>
+      <table class="table-style zakaz-table">
+        <thead>
+          <tr>
+            <th>Дата</th>
+            <th>Статус</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>24/11/2022</td>
+            <td>Доставлен</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>23/11/2022</td>
+            <td>Отправлен</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>23/11/2022</td>
+            <td>Готовится к отправке</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>24/11/2022</td>
+            <td>Оплачен</td>
+            <td><a href="#" download="download" class="btn-second-gold"><i class="icomoon icon-download"></i>Скачать счет</a></td>
+          </tr>
+          <tr>
+            <td>23/11/2022</td>
+            <td>Ожидает оплаты</td>
+            <td></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="lk-section">
+      <div class="heading">
+        <div class="lk-title">Данные о доставке</div>
+      </div>
+      <div class="lk-cards">
+        <div class="lk-card lk-card-second">
+          <div class="lk-card-title">Получатель:</div>
+          <div class="lk-card-descr">Имя Фамилия</div>
+          <div class="lk-card-descr">Номер телефона</div>
+        </div>
+        <div class="lk-card lk-card-second">
+          <div class="lk-card-title">Платежный адрес:</div>
+          <div class="lk-card-descr">Улица, дом и квартира</div>
+          <div class="lk-card-descr">Город, страна и индекс</div>
+        </div>
+        <div class="lk-card lk-card-second">
+          <div class="lk-card-title">Адрес доставки:</div>
+          <div class="lk-card-descr">Улица, дом и квартира</div>
+          <div class="lk-card-descr">Город, страна и индекс</div>
         </div>
       </div>
-      <div class="col">
-        <p>Не хотите платить всю сумму сразу? Платите несколькими частями благодаря рассрочке платежа от ESTO! При оплате покупки
-        используйте лизинговый платеж ESTO - самую доступную, удобную и быструю ссылку для оплаты в рассрочку в Эстонии!</p>
-        <p>При оплате в рассрочку, пожалуйста, обратитесь в службу поддержки ESTO или mishka.ink, и вам будет направлена ​​ссылка
-        для оплаты в рассрочку. При оплате выбирайте подходящий вам период, размер ежемесячного платежа и удобно подписывайте
-        электронной подписью с помощью ID-карты, Smart-ID или Mobile-ID.</p>
-        <p>Рассрочка от ESTO - это чрезвычайно быстрое и удобное платежное решение в Эстонии, которое поможет вам составить график
-        платежей на основе выбранного вами периода. Этот способ оплаты принимает решение в режиме реального времени и помогает
-        совершить покупку менее чем за 60 секунд.</p>
-        <div class="img-grid">
-          <div class="col"><img src="img/oplata/esto_logo.png" alt=""></div>
-        </div>
-        <h4 style="font-weight: 700;">ВНИМАНИЕ!</h4>
-        <p>Каждый взнос является финансовым обязательством. Перед заключением договора рассрочки ознакомьтесь с условиями
-        соответствующей услуги и при необходимости проконсультируйтесь со специалистом.</p>
-        <p>
-          Поставщиком рассрочки ESTO является ESTO AS (регистрационный код 14180709). <br>
-          Стандартные условия рассрочки платежа ЭСТО: <br>
-          Годовая процентная ставка 0% <br>
-          Стоимость договора от 0 евро <br>
-          Срок до 4 лет
-        </p>
-        <h4 style="font-weight: 700; margin-top: 60px;">Мы предлагаем 3 варианта оплаты:</h4>
-        <ol>
-          <li>Платежи от 3 до 60 месяцев и ставка от 9,9% (гарантия банк)</li>
-          <li>3 месяца и 0% для вас, вы платите тремя частями (мы платим проценты за вас 🙂)</li>
-          <li>Купите сегодня и оплатите в следующем месяце (мы платим за вас проценты 😀)</li>
-        </ol>
-        <p>Все граждане Эстонской Республики в возрасте от 18 до 70 лет могут ходатайствовать о рассрочке платежа ESTO. Оплатить
-        рассрочку ESTO можно быстро и удобно даже юридическому лицу.</p>
-        <p>Каждое финансовое решение сопряжено с рисками и обязательствами, поэтому мы просим вас внимательно отнестись к
-        необходимости использования кредитных продуктов. Например, в случае кредита в размере 1059 евро с фиксированной
-        процентной ставкой 13,90% в год на 24 месяца и комиссией за договор в размере 14,90 евро годовая процентная ставка
-        составляет 38,14%, ежемесячный платеж составляет 60,72 евро, а общая сумма к возврату потребителем составляет 1 458,28
-        евро. Оплата в рассрочку предлагается и управляется ESTO AS.</p>
+    </div>
+    <div class="lk-section">
+      <div class="heading">
+        <div class="lk-title">Содержание заказа</div>
       </div>
+      <table class="table-style zakaz-table-soderjanie">
+        <thead>
+          <tr>
+            <th>Товар</th>
+            <th>Количество</th>
+            <th>Цена</th>
+            <th>Сумма</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Xtreme Super Black, 8oz (250ml)</td>
+            <td>3</td>
+            <td>€44,40</td>
+            <td>€133,20</td>
+          </tr>
+          <tr>
+            <td>InkClaw Cartridges, 1229RM</td>
+            <td>10</td>
+            <td>€4,10</td>
+            <td>€41,10</td>
+          </tr>
+          <tr>
+            <td>Doctor PRO naha kreem, 30 ml</td>
+            <td>1</td>
+            <td>€7,10</td>
+            <td>€7,10</td>
+          </tr>
+          <tr class="soderjanie-itogo">
+            <td></td>
+            <td></td>
+            <td>
+              <div class="item">Сумма:</div>
+              <div class="item">Доставка:</div>
+              <div class="item">Скидка:</div>
+            </td>
+            <td>
+              <div class="item">€180,40</div>
+              <div class="item">Бесплатно</div>
+              <div class="item">€18,04</div>
+            </td>
+          </tr>
+          <tr class="soderjanie-itogo">
+            <td></td>
+            <td></td>
+            <td>
+              <div class="item">К оплате:</div>
+            </td>
+            <td>
+              <div class="item">€162,36</div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
     </div>
   </div>
 </section>

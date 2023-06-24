@@ -250,192 +250,28 @@ $(document).ready(function () {
 	// 	]
 	// });
 
-	// ----------------- SWIPER ----------------------
-	var noveltySwiper = new Swiper(".noveltySwiper", {
-		spaceBetween: 20,
-		slidesPerView: 1,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
+
+
+	// select 2
+	jQuery('.js-example-basic-single').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
 	});
-	var newsblSwiper = new Swiper(".newsblSwiper", {
-		spaceBetween: 36,
-		slidesPerView: 3,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
+	jQuery('#orderby').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
 	});
-	var blogblSwiper = new Swiper(".blogblSwiper", {
-		spaceBetween: 36,
-		slidesPerView: 3,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
+	jQuery('#regionSelect, #countrySelect, #regionSecondSelect, #countrySecondSelect').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: 'Выберите'
 	});
-	var watchedblSwiper = new Swiper(".watchedblSwiper", {
-		spaceBetween: 36,
-		slidesPerView: 4,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-	});
-	var similarblSwiper = new Swiper(".similarblSwiper", {
-		spaceBetween: 36,
-		slidesPerView: 4,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-	});
-	var recomblSwiper = new Swiper(".recomblSwiper", {
-		spaceBetween: 36,
-		slidesPerView: 4,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-	});
-	var complectblSwiper = new Swiper(".complectblSwiper", {
-		spaceBetween: 36,
-		slidesPerView: 2,
-		loop: true,
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-	});
+	// jQuery('#countrySelect').select2({
+	// 	minimumResultsForSearch: Infinity,
+	// 	dropdownPosition: 'below',
+	// 	placeholder: 'Выберите'
+	// });
 
-	var prodSecondSwiper = new Swiper(".prodSecondSwiper", {
-		loop: true,
-		spaceBetween: 16,
-		slidesPerView: 4,
-		freeMode: true,
-		watchSlidesProgress: true,
-	});
-	var prodFirstSwiper = new Swiper(".prodFirstSwiper", {
-		loop: true,
-		spaceBetween: 10,
-		navigation: {
-			nextEl: ".product-slider .swiper-button-next",
-			prevEl: ".product-slider .swiper-button-prev",
-		},
-		thumbs: {
-			swiper: prodSecondSwiper,
-		},
-	});
-
-
-	var swiper = new Swiper(".mySwiper", {
-		// Стрелки
-		navigation: {
-			nextEl: ".swiper-button-next",
-			prevEl: ".swiper-button-prev",
-		},
-
-		// Пагинация (точки)
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// },
-
-		// Пагинация (динамическая)
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	dynamicBullets: true,
-		// },
-
-		// Прогрессбар
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	type: "progressbar",
-		// },
-
-		// Пагинация цифрами
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	type: "fraction",
-		// },
-
-		// Пагинация цифрами (кастомная)
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	clickable: true,
-		// 	renderBullet: function (index, className) {
-		// 		return '<span class="' + className + '">' + (index + 1) + "</span>";
-		// 	},
-		// },
-
-		// Скроллбар
-		// scrollbar: {
-		// 	el: ".swiper-scrollbar",
-		// 	hide: true,
-		// },
-
-		// Вертикальный слайдер
-		// direction: "vertical",
-
-		// Отступ между слайдов
-		// spaceBetween: 30,
-
-		// Количество видимых слайдов
-		// slidesPerView: 3,
-
-		// Свободное количество слайдов. Можно использовать в паре с .swiper-slide {width: 80%;}
-		// slidesPerView: "auto",
-
-		// Центрирование слайда
-		// slidesPerView: 3,
-		// centeredSlides: true,
-
-		// Центрирование слайда с автоматическим отображением слайдов.
-		// slidesPerView: "auto",
-		// centeredSlides: true,
-
-		// cssMode (Вроде плавность пролистывания)
-		// cssMode: true,
-		// mousewheel: true,
-		// keyboard: true,
-
-		// Free Mode (Свободное пролистывание)
-		// slidesPerView: 3,
-		// spaceBetween: 20,
-		// freeMode: true,
-
-		// Grid
-		// slidesPerView: 3,
-		// grid: {
-		// 	rows: 2,
-		// },
-		// spaceBetween: 30,
-		// pagination: {
-		// 	el: ".swiper-pagination",
-		// 	clickable: true,
-		// },
-
-		// Бесконечное пролистывание
-		// loop: true,
-
-		// Эффект (один из нескольких)
-		// effect: "coverflow",
-
-		// Автоматичское пролистывание
-		// autoplay: {
-		// 	delay: 2500,
-		// 	disableOnInteraction: false,
-		// },
-
-		// Галерея
-
-	});
 
 	// -------------------------modal----------------------
 	$('.to-state').on('click', function (event) {
@@ -462,24 +298,96 @@ $(document).ready(function () {
 				&& div.has(e.target).length === 0 // и не по его дочерним элементам
 				&& (!select.is(e.target)
 					&& select.has(e.target).length === 0
-				&& !$(e.target).closest('.select2-selection, .select2-search, .select2-container, .select2-results__option').length)) { // и не по элементам с классом select2-selection и select2-search
+					&& !$(e.target).closest('.select2-selection, .select2-search, .select2-container, .select2-results__option').length)) { // и не по элементам с классом select2-selection и select2-search
 				div.parents().removeClass('active'); // скрываем его
 				$('body').removeClass('dis-scroll');
 			}
 		});
 	});
-
-	// select 2
-	jQuery('.js-example-basic-single').select2({
-		minimumResultsForSearch: Infinity,
-		dropdownPosition: 'below',
-	});
-	jQuery('#orderby').select2({
-		minimumResultsForSearch: Infinity,
-		dropdownPosition: 'below',
-		// containerCssClass: "select-style",
-		// customClass: "select-style",
-	});
-
 	//end
+});
+
+
+// ----------------- SWIPER ----------------------
+var noveltySwiper = new Swiper(".noveltySwiper", {
+	spaceBetween: 20,
+	slidesPerView: 1,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+var newsblSwiper = new Swiper(".newsblSwiper", {
+	spaceBetween: 36,
+	slidesPerView: 3,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+var blogblSwiper = new Swiper(".blogblSwiper", {
+	spaceBetween: 36,
+	slidesPerView: 3,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+var watchedblSwiper = new Swiper(".watchedblSwiper", {
+	spaceBetween: 36,
+	slidesPerView: 4,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+var similarblSwiper = new Swiper(".similarblSwiper", {
+	spaceBetween: 36,
+	slidesPerView: 4,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+var recomblSwiper = new Swiper(".recomblSwiper", {
+	spaceBetween: 36,
+	slidesPerView: 4,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+var complectblSwiper = new Swiper(".complectblSwiper", {
+	spaceBetween: 36,
+	slidesPerView: 2,
+	loop: true,
+	navigation: {
+		nextEl: ".swiper-button-next",
+		prevEl: ".swiper-button-prev",
+	},
+});
+
+var prodSecondSwiper = new Swiper(".prodSecondSwiper", {
+	loop: true,
+	spaceBetween: 16,
+	slidesPerView: 4,
+	freeMode: true,
+	watchSlidesProgress: true,
+});
+var prodFirstSwiper = new Swiper(".prodFirstSwiper", {
+	loop: true,
+	spaceBetween: 10,
+	navigation: {
+		nextEl: ".product-slider .swiper-button-next",
+		prevEl: ".product-slider .swiper-button-prev",
+	},
+	thumbs: {
+		swiper: prodSecondSwiper,
+	},
 });

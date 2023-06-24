@@ -78,6 +78,31 @@
 	}
 }
 
+.btn-second-gold {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	gap: 10px;
+	@include gold-gradient-text;
+	font-size: 18px;
+	font-weight: 600;
+	transition: 3s ease;
+	i {
+		font-size: 24px;
+		@include gold-gradient-text;
+		transition: .3s ease;
+	}
+	&:hover {
+		@include gold-gradient-text-hover;
+		i {
+			@include gold-gradient-text-hover;
+		}
+	}
+	&.disabled {
+		color: var(--darkGrey-color);
+	}
+}
+
 
 .green-link {
 	position: relative;

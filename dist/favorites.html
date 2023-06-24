@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Контакты</title>
+  <title>Избранное</title>
 
   <!-- favicons -->
 <link rel="apple-touch-icon" sizes="57x57" href="img/favicon/favicon.svg">
@@ -68,179 +68,312 @@
 
   <!-- header -->
 <header class="header">
-	<div class="container">
-		<div class="header-top">
-			<a href="/" class="logo">Bigmishka</a>
-			<div class="col">
-				<a href="tel:+37255532754" class="header-link">+(372) 5553 2754</a>
-				<a href="mailto:order@mishka.ink" class="header-link">order@mishka.ink</a>
-			</div>
-			<div class="col">
-				<a href="rassrochka.html" class="green-link" data-text="Рассрочка">Рассрочка</a>
-				<a href="studiam-i-masteram.html" class="green-link" data-text="Студиям и мастерам">Студиям и мастерам</a>
-			</div>
-			<div class="header-bar">
-				<div class="lang">
-					<div class="lang-active">
-						<div class="lang-item">EST</div>
-					</div>
-					<div class="lang-dropdown">
-						<div class="lang-item">RU</div>
-						<div class="lang-item">EN</div>
-					</div>
-				</div>
-				<div class="search-label" id="searchBarLabel">
-					<input class="search-input" id="searchHiddenInput" type="type" placeholder="Поиск" />
-					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-zoom"></i></button>
-				</div>
-				<a href="cart.html" class="btn-icon"><i class="icomoon icon-bag"></i></a>
-				<a href="#.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
-				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
-			</div>
-		</div>
-		<div class="header-menu">
-			<ul class="nav-list">
-				<li><a href="#">Новинки</a></li>
-				<li><a href="#">Краски</a></li>
-				<li><a href="#">PMU</a></li>
-				<li><a href="#">Картриджи</a></li>
-				<li><a href="#">Чистящие средства</a></li>
-				<li><a href="#">Аксессуары</a></li>
-				<li><a href="#">Мебель</a></li>
-				<li><a href="#">Оборудование</a></li>
-				<li><a href="#">Источники питания</a></li>
-			</ul>
-		</div>
-	</div>
+  <div class="container">
+    <div class="header-top">
+      <a href="/" class="logo">Bigmishka</a>
+      <div class="col">
+        <a href="tel:+37255532754" class="header-link">+(372) 5553 2754</a>
+        <a href="mailto:order@mishka.ink" class="header-link">order@mishka.ink</a>
+      </div>
+      <div class="col">
+        <a href="rassrochka.html" class="green-link" data-text="Рассрочка">Рассрочка</a>
+        <a href="studiam-i-masteram.html" class="green-link" data-text="Студиям и мастерам">Студиям и мастерам</a>
+      </div>
+      <div class="header-bar">
+        <div class="lang">
+          <div class="lang-active">
+            <div class="lang-item">EST</div>
+          </div>
+          <div class="lang-dropdown">
+            <div class="lang-item">RU</div>
+            <div class="lang-item">EN</div>
+          </div>
+        </div>
+        <div class="search-label" id="searchBarLabel">
+          <input class="search-input" id="searchHiddenInput" type="type" placeholder="Поиск" />
+          <button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-zoom"></i></button>
+        </div>
+        <a href="cart.html" class="btn-icon"><i class="icomoon icon-bag"></i></a>
+        <a href="#.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
+        <a href="lk.html" class="btn-icon"><i class="icomoon icon-user"></i></a>
+      </div>
+    </div>
+    <div class="header-menu">
+      <ul class="nav-list">
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Краски</a></li>
+        <li><a href="#">PMU</a></li>
+        <li><a href="#">Картриджи</a></li>
+        <li><a href="#">Чистящие средства</a></li>
+        <li><a href="#">Аксессуары</a></li>
+        <li><a href="#">Мебель</a></li>
+        <li><a href="#">Оборудование</a></li>
+        <li><a href="#">Источники питания</a></li>
+      </ul>
+    </div>
+  </div>
 </header>
 
   <main>
 
-    <section class="contacts">
+    <section class="lk">
   <div class="container">
-    <div class="heading">
-      <div class="section-title">
-        <div class="neon" data-text="Всегда рады видеть вас">Всегда рады видеть вас</div>
-        <div class="default">В нашем магазине в Таллине</div>
+    <div class="lk-head">
+      <div class="lk-title">Избранное</div>
+      <a href="lk.html" class="lk-link">Вернуться к учетной записи<i class="icomoon icon-sign-out"></i></a>
+    </div>
+    <div class="lk-section favorites">
+      <div class="favorites-cards">
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+        <div class="card">
+          <div class="card-img-wrapper">
+            <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+            <button type="button" class="btn-reset btn-favorites active"><i class="icomoon icon-heart-solid"></i></button>
+            <div class="card-nav">
+              <div class="card-nav-content">
+                <div class="card-nav-btns">
+                  <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                      class="icomoon icon-eye"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                  <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                </div>
+                <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
+                <div class="kolvo">
+                  <button class="kolvo-minus"><i class="icomoon icon-minus"></i></button>
+                  <input class="kolvo-input" maxlength="100" value="1">
+                  <button class="kolvo-plus"><i class="icomoon icon-plus"></i></button>
+                </div>
+              </div>
+            </div>
+            <img src="img/prod-img.jpg" class="card-img" alt="">
+          </div>
+          <a href="product.html" class="card-info">
+            <h3 class="card-name">Название товара</h3>
+            <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+            <div class="card-price">
+              <div class="current">€100</div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!------ pagination ------>
+      <div class="pagination">
+        <div class="nav-links">
+          <a href="#" class="prev disabled"><i class="icomoon icon-arrow"></i>Предыдущая страница</a>
+          <a href="#" class="next">Следующая страница<i class="icomoon icon-arrow"></i></a>
+        </div>
+        <div class="pagination-info">Показано товаров: 13-24 из 50</div>
       </div>
     </div>
-    <div class="contacts-container">
-      <div class="col">
-        <div class="contacts-items-big">
-          <a href="tel:+37255532754">+(372) 5553 2754</a>
-          <a href="mailto:order@mishka.ink">order@mishka.ink</a>
-          <p>Seebi 1, Tallinn, Estonia, 11316</p>
-        </div>
-      </div>
-      <div class="col">
-        <div class="socials">
-          <a href="https://www.facebook.com/MishkaEZ"><img src="img/icons/facebook.svg" alt=""></a>
-          <a href="https://www.instagram.com/bigmishka_tattoosupply/"><img src="img/icons/instagram.svg" alt=""></a>
-        </div>
-        <div class="contacts-items">
-          <p>TORNSTAR OÜ</p>
-          <p>Reg. nr 16512386</p>
-          <p>Время работы: 10:00 - 18:00</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="team">
-  <div class="container">
-    <div class="heading">
-      <div class="section-title">
-        <div class="default">Наша отзывчивая команда</div>
-        <div class="neon" data-text="с радостью поможет вам">с радостью поможет вам</div>
-      </div>
-    </div>
-    <div class="team-cards">
-      <div class="team-card">
-        <div class="team-info">
-          <div class="row">
-            <div class="col">Кристина</div>
-            <div class="col">+(372) 5553-2754</div>
-          </div>
-          <div class="row">
-            <div class="col">Управляющая</div>
-            <div class="col">EST / ENG / RU</div>
-          </div>
-        </div>
-        <img src="img/team/kristina.jpg" class="team-img" alt="">
-      </div>
-      <div class="team-card">
-        <div class="team-info">
-          <div class="row">
-            <div class="col">Кристина</div>
-            <div class="col">+(372) 5553-2754</div>
-          </div>
-          <div class="row">
-            <div class="col">Администратор</div>
-            <div class="col">EST / ENG / RU</div>
-          </div>
-        </div>
-        <img src="img/team/kristina2.jpg" class="team-img" alt="">
-      </div>
-      <div class="team-card">
-        <div class="team-info">
-          <div class="row">
-            <div class="col">Диана</div>
-            <div class="col"></div>
-          </div>
-          <div class="row">
-            <div class="col">Временно в дикрете</div>
-            <div class="col">EST / ENG / RU</div>
-          </div>
-        </div>
-        <img src="img/team/diana.jpg" class="team-img" alt="">
-      </div>
-      <div class="team-card">
-        <div class="team-info">
-          <div class="row">
-            <div class="col">Александр</div>
-            <div class="col">+(372) 5692-7327</div>
-          </div>
-          <div class="row">
-            <div class="col">IT Guru</div>
-            <div class="col">EST / ENG / RU</div>
-          </div>
-        </div>
-        <img src="img/team/aleksandr.jpg" class="team-img" alt="">
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="magazine">
-  <div class="container">
-    <div class="magazine-grid">
-      <div class="row">
-        <div class="col">
-          <img src="img/educbl-img.jpg" alt="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img src="img/educbl-img.jpg" alt="">
-          <div class="text">
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; ЗАХОДИТЕ В НАШ МАГАЗИН В ТАЛЛИНЕ - БУДЕМ РАДЫ ОБСУДИТЬ НОВЫЕ ИГЛЫ, МАШИНКИ И ПРОСТО ПООБЩАТЬСЯ!
-          </div>
-        </div>
-        <div class="col">
-          <img src="img/educbl-img.jpg" alt="">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col">
-          <img src="img/educbl-img.jpg" alt="">
-          <div class="text">
-            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; МЫ НАХОДИМСЯ ПО АДРЕСУ SEEBI 1, TALLINN, ЗДАНИЕ С НАЗВАНИЕМ TORN. У НАС ЕСТЬ ОТДЕЛЬНЫЙ ВХОД С УЛИЦЫ TONDI. ВЫ МОЖЕТЕ ПРИПАРКОВАТЬСЯ БЕСПЛАТНО РЯДОМ СО ЗДАНИЕМ, ЕСЛИ ЕСТЬ СВОБОДНЫЕ МЕСТА. ЕСЛИ НЕТ, ОСТАВЬТЕ МАШИНУ РЯДОМ С ЖЕЛЕЗНОЙ ДОРОГОЙ
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="map" id="map"></div>
   </div>
 </section>
 
