@@ -119,6 +119,8 @@
 @import "widgets/contacts";
 @import "widgets/contentbl";
 @import "widgets/lk";
+@import "widgets/compare";
+@import "widgets/cart";
 
 /***** Page (article) *****/
 // @import "page/content";
@@ -142,6 +144,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-cart-check:before {
+  content: "\e919";
+}
 .icon-message:before {
   content: "\e916";
 }

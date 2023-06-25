@@ -85,8 +85,8 @@
 						<div class="lang-item">EST</div>
 					</div>
 					<div class="lang-dropdown">
-						<div class="lang-item">RU</div>
-						<div class="lang-item">EN</div>
+						<div class="lang-item">EST</div>
+						<div class="lang-item">ENG</div>
 					</div>
 				</div>
 				<div class="search-label" id="searchBarLabel">
@@ -233,7 +233,7 @@
           <img src="img/benefits/bag.png" alt="">
           <h3 class="title-m3">Ваш личный <br> склад расходников</h3>
           <p>Мини-склад бесплатно и без обязательств - у вас на рабочем месте всегда будут необходимые расходники</p>
-          <a href="#" class="link-lg">Подробнее <i class="icomoon icon-arrow"></i></a>
+          <a href="#sklad" class="link-lg">Подробнее <i class="icomoon icon-arrow"></i></a>
         </div>
       </div>
       <div class="three">
@@ -419,7 +419,7 @@
   </div>
 </section>
 
-		<section class="sklad">
+		<section class="sklad" id="sklad">
   <div class="container">
     <div class="heading">
       <div class="section-title">
@@ -441,7 +441,7 @@
     </div>
     <div class="sklad-info">
       <div class="title-m1">Как это работает?</div>
-      <a href="#" class="link-lg">Хочу попробовать<i class="icomoon icon-arrow"></i></a>
+      <a href="#" class="link-lg to-state" data-state="zayavkaSklad">Хочу попробовать<i class="icomoon icon-arrow"></i></a>
       <ul class="steps">
         <li><span>01</span><p>Вы оставляете заявку на физический склад товаров</p></li>
         <li><span>02</span><p>Согласовываем список из ассортимента нашего магазина, цены, количество</p></li>
@@ -825,7 +825,15 @@
 						<div class="state prodView" data-state="prodViewDobavlen">
 							<div class="state-box">
 								<div class="close"></div>
-								<div class="message"><i class="icomoon icon-checked"></i>Товар успешно добавлен в корзину</div>
+								<!-- Товар добавлен -->
+								<div class="message green">
+									<div class="message-left">
+										<div class="message-head">
+											<i class="icomoon icon-checked"></i>
+											<div>Товар успешно добавлен в корзину</div>
+										</div>
+									</div>
+								</div>
 								<div class="product-container">
 									<div class="product-info">
 										<h3 class="card-name">Xtreme Super Black</h3>

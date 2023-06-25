@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Сравнение товаров</title>
+
+  @@include('template/meta.html')
+</head>
+
+<body>
+
+  @@include('widgets/marquee.html')
+
+  @@include('template/header.html')
+
+  <main>
+
+    <section class="compare">
+      <div class="container">
+        <div class="heading">
+          <div class="section-title">
+            <div class="neon" data-text="Сравнение товаров">Сравнение товаров</div>
+          </div>
+        </div>
+        <div class="message">
+          <div class="message-left">
+            <div class="message-head">
+              <i class="icomoon icon-checked"></i><div>Список успешно удален</div>
+            </div>
+          </div>
+        </div>
+        <a href="catalog.html" class="link-lg">В каталог<i class="icomoon icon-arrow"></i></a>
+      </div>
+    </section>
+
+  </main>
+
+  @@include('template/footer.html')
+
+  @@include('template/modals.html')
+
+  @@include('template/scripts.html')
+
+</body>
+
+</html>

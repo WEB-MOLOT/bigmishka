@@ -85,8 +85,8 @@
 						<div class="lang-item">EST</div>
 					</div>
 					<div class="lang-dropdown">
-						<div class="lang-item">RU</div>
-						<div class="lang-item">EN</div>
+						<div class="lang-item">EST</div>
+						<div class="lang-item">ENG</div>
 					</div>
 				</div>
 				<div class="search-label" id="searchBarLabel">
@@ -116,7 +116,61 @@
 
   <main>
 
-    <section class="catalog">
+    <!-- Товар добавлен -->
+<div class="messagebl">
+  <div class="container">
+    <div class="message">
+      <div class="message-left">
+        <div class="message-head">
+          <i class="icomoon icon-checked"></i><div>Товар успешно добавлен в корзину</div>
+        </div>
+        <div class="message-info">Товаров в списке сравнения: 1</div>
+      </div>
+      <div class="message-right">
+        <button class="btn"><i class="icomoon icon-compare"></i>Сравнить</button>
+        <button class="btn-reset btn-remove"><i class="icomoon icon-close"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Ошибка - нельзя добавить больше 5 товаров (message-head вместе с классом red) -->
+<div class="messagebl">
+  <div class="container">
+    <div class="message">
+      <div class="message-left">
+        <div class="message-head red">
+          <i class="icomoon icon-close"></i><div>Нельзя сравнить более 5 товаров</div>
+        </div>
+        <div class="message-info">Товаров в списке сравнения: 5</div>
+      </div>
+      <div class="message-right">
+        <button class="btn"><i class="icomoon icon-compare"></i>Сравнить</button>
+        <button class="btn-reset btn-remove"><i class="icomoon icon-close"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Товар добавлен -->
+<div class="messagebl">
+  <div class="container">
+    <div class="message">
+      <div class="message-left">
+        <div class="message-head">
+          <i class="icomoon icon-checked"></i><div>Товар успешно удален из сравнения</div>
+        </div>
+        <div class="message-info">Товаров в списке сравнения: 1</div>
+      </div>
+      <div class="message-right">
+        <button class="btn"><i class="icomoon icon-compare"></i>Сравнить</button>
+        <button class="btn-reset btn-remove"><i class="icomoon icon-close"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<section class="catalog">
   <div class="container">
     <div class="heading">
       <div class="section-title">
@@ -645,7 +699,7 @@
           <img src="img/benefits/bag.png" alt="">
           <h3 class="title-m3">Ваш личный <br> склад расходников</h3>
           <p>Мини-склад бесплатно и без обязательств - у вас на рабочем месте всегда будут необходимые расходники</p>
-          <a href="#" class="link-lg">Подробнее <i class="icomoon icon-arrow"></i></a>
+          <a href="#sklad" class="link-lg">Подробнее <i class="icomoon icon-arrow"></i></a>
         </div>
       </div>
       <div class="three">
@@ -991,7 +1045,15 @@
 						<div class="state prodView" data-state="prodViewDobavlen">
 							<div class="state-box">
 								<div class="close"></div>
-								<div class="message"><i class="icomoon icon-checked"></i>Товар успешно добавлен в корзину</div>
+								<!-- Товар добавлен -->
+								<div class="message green">
+									<div class="message-left">
+										<div class="message-head">
+											<i class="icomoon icon-checked"></i>
+											<div>Товар успешно добавлен в корзину</div>
+										</div>
+									</div>
+								</div>
 								<div class="product-container">
 									<div class="product-info">
 										<h3 class="card-name">Xtreme Super Black</h3>

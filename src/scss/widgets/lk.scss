@@ -196,6 +196,13 @@
       padding-left: 0;
     }
   }
+  .table-title {
+    margin-bottom: 10px;
+    display: block;
+    width: 100%;
+    color: var(--darkGrey-color);
+    text-transform: uppercase;
+  }
 }
 
 .zakaz-table {
@@ -251,9 +258,6 @@
 }
 
 .row-3 {
-  // display: grid;
-  // grid-template-columns: repeat(3, 1fr);
-  // gap: 36px;
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;

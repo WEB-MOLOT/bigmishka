@@ -66,6 +66,33 @@
 	}
 }
 
+	.neon {
+		position: relative;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 1.25;
+		color: transparent;
+		text-transform: uppercase;
+		-webkit-text-stroke-width: 0.8px;
+		-webkit-text-stroke-color: var(--green-color);
+		transition: .3s ease;
+		&:before {
+			content: attr(data-text);
+			position: absolute;
+			left: 0;
+			filter: blur(8px);
+			-webkit-animation: fadeinout 2s linear forwards infinite;
+      animation: fadeinout 2s linear forwards infinite;
+		}
+	}
+	@-webkit-keyframes fadeinout {
+  0%,100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+	@keyframes fadeinout {
+		0%,100% { opacity: 0; }
+		50% { opacity: 1; }
+	}
 
 
 .section-text {

@@ -266,6 +266,21 @@ $(document).ready(function () {
 		dropdownPosition: 'below',
 		placeholder: 'Выберите'
 	});
+	jQuery('#regionCartSelect').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: 'Регион/Уезд'
+	});
+	jQuery('#countryCartSelect').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: 'Страна'
+	});
+	jQuery('#deliveryVariantCartSelect').select2({
+		minimumResultsForSearch: Infinity,
+		dropdownPosition: 'below',
+		placeholder: 'Посылочный автомат'
+	});
 	// jQuery('#countrySelect').select2({
 	// 	minimumResultsForSearch: Infinity,
 	// 	dropdownPosition: 'below',

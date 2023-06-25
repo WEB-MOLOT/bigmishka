@@ -3,10 +3,24 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	&-item {
+		margin-bottom: 24px;
+	}
+  &-title {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1.25;
+    color: var(--font-color);
+  }
 	&-group {
 		position: relative;
 		width: 100%;
 		margin-bottom: 24px;
+		.select2 {
+			width: 100% !important;
+		}
 	}
 	label {
 		display: block;
@@ -100,6 +114,10 @@
 	// 	}
 	// }
 	&-tooltip {
+		display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+    height: 60px;
 		color: var(--font-color);
 		font-weight: 400;
 		font-size: 17px;
@@ -232,9 +250,8 @@
     margin-top: 36px;
   }
 }
-.form-subs {
-	.form-group {
-		.btn-reset {
+.form-subs .form-group .btn-reset,
+.form-group .btn-reset {
 			position: absolute;
 			top: 50%;
 			right: 20px;
@@ -246,8 +263,6 @@
 			&:hover {
 				color: var(--gold-color);
 			}
-		}
-	}
 }
 .formbl-form {
 	.link-lg {
@@ -352,6 +367,26 @@
 		font-family: 'icomoon';
 		font-size: 17px;
 		color: var(--gold-color);
+	}
+}
+.checkbox-item {
+	&-container {
+		display: flex;
+		align-items: flex-start;
+		justify-content: space-between;
+		width: 100%;
+	}
+	&-info {
+		margin-left: 14px;
+		font-size: 17px;
+		text-align: right;
+	}
+	.checkbox {
+		margin-bottom: 20px;
+	}
+	.row-2 {
+		margin-top: 14px;
+		margin-bottom: 16px;
 	}
 }
 
@@ -462,7 +497,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	font-size: 17px !important;
 	color: var(--font-color);
 	background: #2D2D2D;
-	border-radius: 0px !important;
+	border-radius: 0px 0px 8px 8px !important;
 	border: 0 !important;
 	box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
 }
@@ -513,6 +548,7 @@ input[type="number"]::-webkit-inner-spin-button {
 	}
 	.select2-container .select2-selection--single {
 		background: linear-gradient(114.33deg, #292929 0%, #141414 100%);
+		border: 1px solid #393939 !important;
 	}
 	.select2-container--default .select2-selection--single .select2-selection__arrow {
 		right: 10px;
@@ -528,6 +564,10 @@ input[type="number"]::-webkit-inner-spin-button {
 				transform: none;
 			}
 		}
+	}
+	.select2-dropdown {
+		border: 1px solid #393939 !important;
+		background: linear-gradient(135deg, #292929 0%, #141414 100%);
 	}
 }
 .select-second {
