@@ -201,8 +201,10 @@
 .search-input {
   position: absolute;
   top: -2px;
-  right: -9px;
-  padding: 9px 16px;
+  // right: -9px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 9px 60px 9px 16px;
   width: 40px;
   height: 44px;
   opacity: 0;
@@ -229,7 +231,11 @@
     width: 280px;
     opacity: 1;
   }
-  .search-btn i {
-    color: var(--black-color);
+  .search-btn {
+    transform: translateX(110px);
+    // right: -115px;
+    i {
+      color: var(--black-color);
+    }
   }
 }

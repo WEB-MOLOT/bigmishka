@@ -127,13 +127,17 @@
 		position: absolute;
 		left: 0;
 		filter: blur(8px);
+		transition: .3s ease;
 	}
   &:not(:last-child) {
     margin-bottom: 5px;
   }
 	&:hover {
-		text-decoration: underline;
+		text-decoration: none;
 		color: transparent;
+		&:before {
+			filter: blur(5px);
+		}
 	}
 }
 
@@ -155,7 +159,7 @@
     color: var(--font-color);
 		transition: .3s ease;
     &:hover {
-      color: var(--green-color);
+      color: var(--gold-color);
     }
   }
 }

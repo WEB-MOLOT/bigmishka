@@ -16,12 +16,12 @@
   }
   &::before {
     top: 0;
-    background-image: url('../img/novelty/noveltyTop.png');
+    background-image: url('../img/novelty/noveltyTop.svg');
     background-position-y: top;
   }
   &::after {
     bottom: 0;
-    background-image: url('../img/novelty/noveltyBottom.png');
+    background-image: url('../img/novelty/noveltyBottom.svg');
     background-position-y: bottom;
   }
   &Swiper {
@@ -81,6 +81,16 @@
         height: 100%;
         object-fit: contain;
       }
+    }
+  }
+  .swiper-slide {
+    .novelty-img-second {
+      opacity: 0;
+    }
+  }
+  .swiper-slide-active {
+    .novelty-img-second {
+      opacity: 1;
     }
   }
 }

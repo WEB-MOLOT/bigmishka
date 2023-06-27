@@ -30,9 +30,11 @@
       gap: 20px;
       .current {
         font-size: 40px;
+        font-weight: 400;
       }
       .old {
         font-size: 30px;
+        font-weight: 400;
       }
     }
   }
@@ -88,6 +90,10 @@
       color: var(--black-color);
     }
     .card-price {
+      .current,
+      .old {
+        font-weight: 400;
+      }
       &-info {
         color: #141414;
         background: var(--white-color);
@@ -104,6 +110,9 @@
       }
       .btn-second {
         color: var(--black-color);
+        &:hover {
+          color: var(--gold-color);
+        }
       }
     }
   }
@@ -154,6 +163,7 @@
     .btn {
       padding-left: 36px;
       padding-left: 36px;
+      box-shadow: 5px 5px 20px 0px rgba(144, 87, 31, 0.40);
     }
     .btn-remove {
       margin-left: 40px;

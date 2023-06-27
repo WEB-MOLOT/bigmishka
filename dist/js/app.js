@@ -2,27 +2,43 @@ $(document).ready(function () {
 
 	
 	// Marquee
-	function Marquee(selector, speed) {
-		const block = document.querySelector(selector);
-		if (block) {
-			const parentSelector = document.querySelector(selector);
-			const clone = parentSelector.innerHTML;
-			const firstElement = parentSelector.children[0];
-			let i = 0;
-			console.log(firstElement);
-			parentSelector.insertAdjacentHTML('beforeend', clone);
-			parentSelector.insertAdjacentHTML('beforeend', clone);
+	// function Marquee(selector, speed) {
+	// 	const block = document.querySelector(selector);
+	// 	if (block) {
+	// 		const parentSelector = document.querySelector(selector);
+	// 		const clone = parentSelector.innerHTML;
+	// 		const firstElement = parentSelector.children[0];
+	// 		let i = 0;
+	// 		console.log(firstElement);
+	// 		parentSelector.insertAdjacentHTML('beforeend', clone);
+	// 		parentSelector.insertAdjacentHTML('beforeend', clone);
 
-			setInterval(function () {
-				firstElement.style.marginLeft = `-${i}px`;
-				if (i > firstElement.clientWidth) {
-					i = 0;
-				}
-				i = i + speed;
-			}, 0)
+	// 		setInterval(function () {
+	// 			firstElement.style.marginLeft = `-${i}px`;
+	// 			if (i > firstElement.clientWidth) {
+	// 				i = 0;
+	// 			}
+	// 			i = i + speed;
+	// 		}, 0)
+	// 	}
+	// }
+	// window.addEventListener('load', Marquee('.marquee', 0.2))
+
+	var paralaxes = document.querySelectorAll(".paralax");
+	var moveCoef = 0.5;
+	window.addEventListener("scroll", scroll);
+	window.addEventListener("resize", scroll);
+	scroll();
+	function scroll() {
+		for (var i = 0; i < paralaxes.length; i++) {
+			var paralax = paralaxes[i];
+			var r = paralax.getBoundingClientRect();
+			var paralaxYCenter = r.y + r.height / 2;
+			var scrollYCenter = window.innerHeight / 2;
+			var move = (paralaxYCenter - scrollYCenter) * moveCoef - 100;
+			paralax.style.backgroundPositionY = move + "px";
 		}
-	}
-	window.addEventListener('load', Marquee('.marquee', 0.2))
+	} 
 
 
 	// Search (Header)
@@ -328,6 +344,10 @@ var noveltySwiper = new Swiper(".noveltySwiper", {
 	spaceBetween: 20,
 	slidesPerView: 1,
 	loop: true,
+	autoplay: {
+		delay: 5000,
+		disableOnInteraction: false,
+	},
 	navigation: {
 		nextEl: ".swiper-button-next",
 		prevEl: ".swiper-button-prev",

@@ -37,6 +37,7 @@
     display: flex;
     align-items: flex-start;
     justify-content: flex-start;
+    position: relative;
     width: 100%;
     margin-bottom: 68px;
     &-wrapper {
@@ -252,6 +253,7 @@
       width: 100px;
       margin-right: 14px;
       border-radius: 15px;
+      box-shadow: 3px 3px 15px 0px rgba(0, 0, 0, 0.15);
       .card-img {
         border-radius: 15px;
       }
@@ -413,6 +415,22 @@
       box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.10);
       &:not(:last-child) {
         margin-bottom: 20px;
+      }
+    }
+  }
+  .cartbar {
+    .cart-card {
+      &:not(:last-child) {
+        padding-bottom: 14px;
+        margin-bottom: 20px;
+        &::before {
+          content: '';
+          position: absolute;
+          left: -20px;bottom: 0;
+          width: calc(100% + 34px);
+          height: 0.7px;
+          background-color: #D0D0D0;
+        }
       }
     }
   }

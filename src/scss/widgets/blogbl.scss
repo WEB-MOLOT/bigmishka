@@ -4,12 +4,23 @@
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-position-y: top;
-  .heading {
-    margin-bottom: 60px;
-  }
   .section-title {
     .neon {
       margin-left: 90px;
+    }
+  }
+  &-container {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    width: 100%;
+    flex-wrap: wrap;
+    .heading {
+      width: calc(100% - 200px);
+      margin-bottom: 60px;
+    }
+    .link-lg {
+      margin-bottom: 72px;
     }
   }
 }

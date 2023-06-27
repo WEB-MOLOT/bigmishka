@@ -53,20 +53,20 @@
 		border: 0;outline: none;
 		background: #2D2D2D;
 		transition: .3s ease;
-		&:focus {
-			&::-webkit-input-placeholder {
-				color: var(--white-color);
-			}
-			&::-moz-placeholder {
-				color: var(--white-color);
-			} /* Firefox 19+ */
-			&:-moz-placeholder {
-				color: var(--white-color);
-			} /* Firefox 18- */
-			&:-ms-input-placeholder {
-				color: var(--white-color);
-			}
-		}
+		// &:focus {
+		// 	&::-webkit-input-placeholder {
+		// 		color: var(--white-color);
+		// 	}
+		// 	&::-moz-placeholder {
+		// 		color: var(--white-color);
+		// 	} /* Firefox 19+ */
+		// 	&:-moz-placeholder {
+		// 		color: var(--white-color);
+		// 	} /* Firefox 18- */
+		// 	&:-ms-input-placeholder {
+		// 		color: var(--white-color);
+		// 	}
+		// }
 	}
 
 	textarea {
@@ -86,20 +86,20 @@
 		outline: none;
 		background: #2D2D2D;
 		transition: .3s ease;
-		&:focus {
-			&::-webkit-input-placeholder {
-				color: var(--white-color);
-			}
-			&::-moz-placeholder {
-				color: var(--white-color);
-			} /* Firefox 19+ */
-			&:-moz-placeholder {
-				color: var(--white-color);
-			} /* Firefox 18- */
-			&:-ms-input-placeholder {
-				color: var(--white-color);
-			}
-		}
+		// &:focus {
+		// 	&::-webkit-input-placeholder {
+		// 		color: var(--white-color);
+		// 	}
+		// 	&::-moz-placeholder {
+		// 		color: var(--white-color);
+		// 	} /* Firefox 19+ */
+		// 	&:-moz-placeholder {
+		// 		color: var(--white-color);
+		// 	} /* Firefox 18- */
+		// 	&:-ms-input-placeholder {
+		// 		color: var(--white-color);
+		// 	}
+		// }
 	}
 	// p.acept {
 	// 	margin: 0.8em 0;
@@ -114,14 +114,16 @@
 	// 	}
 	// }
 	&-tooltip {
-		display: inline-flex;
-    align-items: center;
-    vertical-align: middle;
-    height: 60px;
+		// display: inline-flex;
+    // flex-direction: column;
+    // align-items: flex-start;
+		display: inline;
+    min-height: 60px;
 		color: var(--font-color);
 		font-weight: 400;
 		font-size: 17px;
 		a {
+			display: inline-flex;
 			text-decoration: underline;
 			&:hover {
 				text-decoration: none;
@@ -234,6 +236,12 @@
 		border-radius: 8px;
 		background: #ECECEC;
 		box-shadow: 3px 3px 10px rgba(191, 191, 191, 0.25);
+	}
+}
+.state {
+	.kolvo-minus:hover,
+	.kolvo-plus:hover {
+		color: var(--black-color);
 	}
 }
 

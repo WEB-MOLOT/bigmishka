@@ -62,8 +62,37 @@
     <div id="marquee"><span>Бесплатная доставка при заказе от €150</span></div>
   </div> -->
 
-  <div class="marquee">
+  <!-- <div class="marquee">
     <h1>Бесплатная доставка при заказе от €150</h1>
+  </div> -->
+
+  <div class="marqueebl">
+    <div class="items-wrap">
+      <div class="items marquee">
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+      </div>
+      <div aria-hidden="true" class="items marquee">
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+      </div>
+    </div>  
   </div>
 
   <!-- header -->
@@ -131,9 +160,10 @@
       </div>
       <form class="woocommerce-ordering" method="get">
         <select name="orderby" id="orderby" class="orderby js-example-basic-single">
-          <option value="popularity" selected="selected">По популярности</option>
-          <option value="price">По стоимости</option>
+          <option value="priceIncrease" selected="selected">Цена по возрастанию</option>
+          <option value="priceDescending">Цена по убыванию</option>
           <option value="new">По новизне</option>
+          <option value="discount">По скидке</option>
         </select>
       </form>
     </div>
@@ -214,13 +244,14 @@
         <div class="catalog-cards">
           <div class="card">
             <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset btn-oneklick">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -330,14 +361,13 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
-              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -361,8 +391,9 @@
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                        class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
                   </div>
                   <div class="card-nav-nalichie">Нет на складе</div>
                 </div>
@@ -378,13 +409,14 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset btn-oneklick">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -404,14 +436,13 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
-              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -435,8 +466,9 @@
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                        class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
                   </div>
                   <div class="card-nav-nalichie">Нет на складе</div>
                 </div>
@@ -452,13 +484,14 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset btn-oneklick">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -478,14 +511,13 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
-              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -509,8 +541,9 @@
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                        class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
                   </div>
                   <div class="card-nav-nalichie">Нет на складе</div>
                 </div>
@@ -526,13 +559,14 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset btn-oneklick">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -552,14 +586,13 @@
           </div>
           <div class="card">
             <div class="card-img-wrapper">
-              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
               <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="В корзину" class="btn-reset card-nav-btn"><i class="icomoon icon-bag2"></i></button>
                   </div>
                   <div class="card-nav-nalichie"><button type="button" class="btn-reset">Купить в 1 клик</button></div>
                   <div class="kolvo">
@@ -583,8 +616,9 @@
               <div class="card-nav">
                 <div class="card-nav-content">
                   <div class="card-nav-btns">
-                    <button type="button" class="btn-reset card-nav-btn to-state" data-state="prodView"><i class="icomoon icon-eye"></i></button>
-                    <button type="button" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
+                    <button type="button" title="Быстрый просмотр" class="btn-reset card-nav-btn to-state" data-state="prodView"><i
+                        class="icomoon icon-eye"></i></button>
+                    <button type="button" title="К сравнению" class="btn-reset card-nav-btn"><i class="icomoon icon-compare"></i></button>
                   </div>
                   <div class="card-nav-nalichie">Нет на складе</div>
                 </div>
@@ -621,7 +655,7 @@
   </div>
 </section>
 
-    <section class="benefits benefits-first">
+    <section class="benefits benefits-first paralax">
   <div class="container">
     <div class="heading">
       <div class="section-title">
@@ -685,7 +719,7 @@
   </div>
 </section>
 
-    <section class="watchedbl">
+    <section class="watchedbl paralax">
   <div class="container">
     <div class="heading">
       <div class="section-title">
@@ -724,13 +758,14 @@
               <div class="card-info">
                 <h3 class="card-name">Название товара</h3>
                 <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
-                <div class="card-price"><div class="current">€100</div><div class="old">€150</div></div>
+                <div class="card-price"><div class="current">€100</div></div>
               </div>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="product.html" class="card">
               <div class="card-img-wrapper">
+                <div class="card-discount"><img src="img/discount.svg" alt=""></div>
                 <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
                 <img src="img/prod-img-second.jpg" class="card-img-second" alt="">
                 <img src="img/prod-img.jpg" class="card-img" alt="">
@@ -752,13 +787,14 @@
               <div class="card-info">
                 <h3 class="card-name">Название товара</h3>
                 <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
-                <div class="card-price"><div class="current">€100</div><div class="old">€150</div></div>
+                <div class="card-price"><div class="current">€100</div></div>
               </div>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="product.html" class="card">
               <div class="card-img-wrapper">
+                <div class="card-discount"><img src="img/discount.svg" alt=""></div>
                 <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
                 <img src="img/prod-img-second.jpg" class="card-img-second" alt="">
                 <img src="img/prod-img.jpg" class="card-img" alt="">
@@ -780,7 +816,7 @@
               <div class="card-info">
                 <h3 class="card-name">Название товара</h3>
                 <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
-                <div class="card-price"><div class="current">€100</div><div class="old">€150</div></div>
+                <div class="card-price"><div class="current">€100</div></div>
               </div>
             </a>
           </div>
@@ -844,6 +880,7 @@
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contacts.html">Контакты</a></li>
           <li><a href="oplata-dostavka-vozvrat.html">Оплата, доставка и возврат</a></li>
+          <li><a href="rassrochka.html">Рассрочка</a></li>
         </ul>
       </div>
       <div class="col">

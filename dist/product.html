@@ -62,8 +62,37 @@
     <div id="marquee"><span>Бесплатная доставка при заказе от €150</span></div>
   </div> -->
 
-  <div class="marquee">
+  <!-- <div class="marquee">
     <h1>Бесплатная доставка при заказе от €150</h1>
+  </div> -->
+
+  <div class="marqueebl">
+    <div class="items-wrap">
+      <div class="items marquee">
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+      </div>
+      <div aria-hidden="true" class="items marquee">
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+        <div class="item">Бесплатная доставка при заказе от €150</div>
+      </div>
+    </div>  
   </div>
 
   <!-- header -->
@@ -239,7 +268,7 @@
         </div>
       </div>
       <div class="col">
-        <h4 class="title-m2">Описание</h4>
+        <h4 class="title-m2">Характеристики</h4>
         <div class="section-text">
           <ul>
             <li>Объем: 250 мл</li>
@@ -297,7 +326,7 @@
             <div class="form-group">
               <input type="email" class="form-input" placeholder="E-mail">
             </div>
-            <div class="form-tooltip">Чтобы задать вопрос, нужно <a href="#">войти или зарегистрироваться</a></div>
+            <div class="form-tooltip">Чтобы задать вопрос, нужно <a href="#" class="to-state" data-state="login">войти</a> или <a href="#" class="to-state" data-state="register">зарегистрироваться</a></div>
           </div>
           <button type="submit" class="btn-reset link-lg">Задать вопрос<i class="icomoon icon-arrow"></i></button>
         </form>
@@ -622,7 +651,7 @@
   </div>
 </section>
 
-    <section class="watchedbl">
+    <section class="watchedbl paralax">
   <div class="container">
     <div class="heading">
       <div class="section-title">
@@ -661,13 +690,14 @@
               <div class="card-info">
                 <h3 class="card-name">Название товара</h3>
                 <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
-                <div class="card-price"><div class="current">€100</div><div class="old">€150</div></div>
+                <div class="card-price"><div class="current">€100</div></div>
               </div>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="product.html" class="card">
               <div class="card-img-wrapper">
+                <div class="card-discount"><img src="img/discount.svg" alt=""></div>
                 <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
                 <img src="img/prod-img-second.jpg" class="card-img-second" alt="">
                 <img src="img/prod-img.jpg" class="card-img" alt="">
@@ -689,13 +719,14 @@
               <div class="card-info">
                 <h3 class="card-name">Название товара</h3>
                 <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
-                <div class="card-price"><div class="current">€100</div><div class="old">€150</div></div>
+                <div class="card-price"><div class="current">€100</div></div>
               </div>
             </a>
           </div>
           <div class="swiper-slide">
             <a href="product.html" class="card">
               <div class="card-img-wrapper">
+                <div class="card-discount"><img src="img/discount.svg" alt=""></div>
                 <button type="button" class="btn-reset btn-favorites"><i class="icomoon icon-heart"></i></button>
                 <img src="img/prod-img-second.jpg" class="card-img-second" alt="">
                 <img src="img/prod-img.jpg" class="card-img" alt="">
@@ -717,7 +748,7 @@
               <div class="card-info">
                 <h3 class="card-name">Название товара</h3>
                 <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
-                <div class="card-price"><div class="current">€100</div><div class="old">€150</div></div>
+                <div class="card-price"><div class="current">€100</div></div>
               </div>
             </a>
           </div>
@@ -781,6 +812,7 @@
           <li><a href="faq.html">FAQ</a></li>
           <li><a href="contacts.html">Контакты</a></li>
           <li><a href="oplata-dostavka-vozvrat.html">Оплата, доставка и возврат</a></li>
+          <li><a href="rassrochka.html">Рассрочка</a></li>
         </ul>
       </div>
       <div class="col">
