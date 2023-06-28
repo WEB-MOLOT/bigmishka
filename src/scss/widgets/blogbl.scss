@@ -9,18 +9,38 @@
       margin-left: 90px;
     }
   }
-  &-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    .heading {
-      width: calc(100% - 200px);
-      margin-bottom: 60px;
-    }
-    .link-lg {
-      margin-bottom: 72px;
+  // &-container {
+  //   display: flex;
+  //   align-items: flex-end;
+  //   justify-content: space-between;
+  //   width: 100%;
+  //   flex-wrap: wrap;
+  //   .heading {
+  //     width: calc(100% - 200px);
+  //     margin-bottom: 60px;
+  //   }
+  //   .link-lg {
+  //     margin-bottom: 72px;
+  //   }
+  // }
+}
+
+@include tablet {
+  .blogbl {
+    padding-bottom: 60px;
+  }
+}
+
+@include mobile {
+  .blogbl {
+    padding-bottom: 40px;
+    .section-title {
+      .neon {
+        margin-left: 60px;
+      }
+      .default {
+        margin-left: 25px;
+      }
     }
   }
 }

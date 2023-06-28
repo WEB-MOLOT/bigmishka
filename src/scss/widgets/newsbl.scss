@@ -11,18 +11,35 @@
       top: 55%;
     }
   }
-  &-container {
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-between;
-    width: 100%;
-    flex-wrap: wrap;
-    .heading {
-      width: calc(100% - 200px);
-      margin-bottom: 60px;
-    }
-    .link-lg {
-      margin-bottom: 72px;
+  // &-container {
+  //   display: flex;
+  //   align-items: flex-end;
+  //   justify-content: space-between;
+  //   width: 100%;
+  //   flex-wrap: wrap;
+  //   .heading {
+  //     width: calc(100% - 200px);
+  //     margin-bottom: 60px;
+  //   }
+  //   .link-lg {
+  //     margin-bottom: 72px;
+  //   }
+  // }
+}
+
+@include mobile {
+  .newsbl {
+    .section-title {
+      .neon {
+        margin-left: auto;
+        margin-right: 60px;
+      }
+      .default {
+        margin-left: auto;
+      }
+      .number {
+        top: 0%;
+      }
     }
   }
 }

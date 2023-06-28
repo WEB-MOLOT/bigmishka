@@ -25,7 +25,7 @@
   &-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 54px 36px;
+    gap: 54px var(--default-gap);
   }
 }
 
@@ -134,3 +134,5 @@
     }
   }
 }
+
+

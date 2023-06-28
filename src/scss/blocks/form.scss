@@ -258,19 +258,24 @@
     margin-top: 36px;
   }
 }
+.form-subs .form-group {
+	.form-input {
+		padding-right: 60px;
+	}
+}
 .form-subs .form-group .btn-reset,
 .form-group .btn-reset {
-			position: absolute;
-			top: 50%;
-			right: 20px;
-			transform: translateY(-50%);
-			width: 24px;
-			height: 24px;
-			font-size: 24px;
-			color: var(--font-color);
-			&:hover {
-				color: var(--gold-color);
-			}
+	position: absolute;
+	top: 50%;
+	right: 20px;
+	transform: translateY(-50%);
+	width: 24px;
+	height: 24px;
+	font-size: 24px;
+	color: var(--font-color);
+	&:hover {
+		color: var(--gold-color);
+	}
 }
 .formbl-form {
 	.link-lg {
@@ -630,3 +635,193 @@ input[type="number"]::-webkit-inner-spin-button {
 // 	background: #ECECEC;
 // 	box-shadow: 3px 3px 10px 0px rgba(101, 101, 101, 0.25);
 // }
+
+
+
+
+
+
+
+@include mobile {
+	/*-----form-----*/
+	.form {
+		flex-direction: column;
+		justify-content: flex-start;
+		// &-item {
+		// 	margin-bottom: 24px;
+		// }
+		// &-title {
+		// 	margin-bottom: 20px;
+		// 	font-size: 20px;
+		// }
+		// &-group {
+		// 	margin-bottom: 24px;
+		// }
+		&-label {
+			.wallet {
+				left: 5px;
+				width: 18px;
+				font-size: 16px;
+				line-height: 20px;
+			}
+		}
+		&-input {
+			height: 50px;
+			padding: 16px 15px;
+			font-size: 15px;
+			line-height: 18px;
+			border-radius: 5px;
+		}
+		textarea {
+			min-height: 50px;
+			height: 120px;
+			padding: 16px 15px;
+			font-size: 15px;
+			line-height: 18px;
+			border-radius: 5px;
+		}
+		&-tooltip {
+			min-height: 50px;
+			font-size: 15px;
+		}
+	}
+	// .range {
+	// 	position: relative;
+	// 	display: block;
+	// 	width: 100%;
+	// 	height: 20px;
+	// 	margin-top: 20px;
+	// 	&-line {
+	// 		content: '';
+	// 		position: absolute;
+	// 		left: 0;
+	// 		top: 50%;
+	// 		margin-top: -1.5px;
+	// 		width: 100%;
+	// 		height: 3px;
+	// 		background: #EBE3D5;
+	// 	}
+	// 	&-button {
+	// 		content: '';
+	// 		position: absolute;
+	// 		top: 0;
+	// 		width: 20px;
+	// 		height: 20px;
+	// 		border-radius: 20px;
+	// 		border: 1px solid #ECDBBB;
+	// 		background: linear-gradient(180deg, #C9A869 0%, #CC9E45 100%);
+	// 		z-index: 2;
+	// 		cursor: pointer;
+	// 		&:hover {
+	// 			border: 0;
+	// 		}
+	// 		&-min {
+	// 			left: 0;
+	// 		}
+	// 		&-max {
+	// 			right: 0;
+	// 		}
+	// 	}
+	// }
+
+	// .kolvo {
+	// 	width: 170px;
+	// 	display: flex;
+	// 	align-items: center;
+	// 	justify-content: space-between;
+	// 	&-minus,
+	// 	&-plus {
+	// 		width: 26px;
+	// 		height: 26px;
+	// 		font-size: 24px;
+	// 	}
+	// 	&-input {
+	// 		font-size: 16px;
+	// 		width: 36px;
+	// 		height: 26px;
+	// 		border-radius: 8px;
+	// 	}
+	// }
+
+	// .form-wrapper {
+	// 	.title-m3 {
+	// 		font-size: 20px;
+	// 		margin-bottom: 10px;
+	// 	}
+	// 	.section-text {
+	// 		font-size: 18px;
+	// 	}
+	// 	.form {
+	// 		margin-top: 36px;
+	// 	}
+	// }
+	.form-subs .form-group .btn-reset,
+	.form-group .btn-reset {
+		right: 16px;
+		width: 16px;
+		height: 16px;
+		font-size: 16px;
+	}
+	// .formbl-form {
+	// 	.link-lg {
+	// 		margin-top: 24px;
+	// 	}
+	// }
+	// .prodfaq-form {
+	// 	.row {
+	// 		align-items: flex-start;
+	// 		justify-content: space-between;
+	// 		width: 100%;
+	// 		.form-group:nth-child(1) {
+	// 			width: calc(46% - 24px);
+	// 		}
+	// 		.form-group:nth-child(2) {
+	// 			width: calc(27% - 24px);
+	// 		}
+	// 		.form-tooltip {
+	// 			margin-top: 5px;
+	// 			width: calc(27% - 24px);
+	// 		}
+	// 		textarea {
+	// 			height: 60px;
+	// 		}
+	// 	}
+	// }
+	// .educbl-form {
+	// 	.row {
+	// 		align-items: flex-start;
+	// 		justify-content: space-between;
+	// 		width: 100%;
+	// 		.form-group {
+	// 			width: calc(25% - 15px);
+	// 		}
+	// 		.link-lg {
+	// 			margin-left: 20px;
+	// 			width: calc(25% - 15px);
+	// 			height: 60px;
+	// 		}
+	// 	}
+	// }
+
+	/* Checkbox */
+	// .checkbox-item {
+	// 	&-container {
+	// 		display: flex;
+	// 		align-items: flex-start;
+	// 		justify-content: space-between;
+	// 		width: 100%;
+	// 	}
+	// 	&-info {
+	// 		margin-left: 14px;
+	// 		font-size: 17px;
+	// 		text-align: right;
+	// 	}
+	// 	.checkbox {
+	// 		margin-bottom: 20px;
+	// 	}
+	// 	.row-2 {
+	// 		margin-top: 14px;
+	// 		margin-bottom: 16px;
+	// 	}
+	// }
+}

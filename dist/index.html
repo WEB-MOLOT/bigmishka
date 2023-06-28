@@ -96,7 +96,7 @@
   </div>
 
 	<!-- header -->
-<header class="header">
+<header class="header header-desktop">
 	<div class="container">
 		<div class="header-top">
 			<a href="/" class="logo">Bigmishka</a>
@@ -123,7 +123,7 @@
 					<button class="btn-icon search-btn" id="searchToggleBtn"><i class="icomoon icon-zoom"></i></button>
 				</div>
 				<a href="cart.html" class="btn-icon"><i class="icomoon icon-bag"></i></a>
-				<a href="#.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
+				<a href="favorites.html" class="btn-icon"><i class="icomoon icon-heart"></i></a>
 				<a href="#" class="btn-icon to-state" data-state="login"><i class="icomoon icon-user"></i></a>
 			</div>
 		</div>
@@ -141,6 +141,62 @@
 			</ul>
 		</div>
 	</div>
+</header>
+	
+	<!-- header-mobile -->
+<header class="header header-mob">
+  <div class="container">
+    <div class="header-top">
+      <!-- Toggle burger button -->
+      <div class="btn-toggle" id="burger-toggle">
+        <i class="icomoon icon-burger"></i>
+        <i class="icomoon icon-close"></i>
+      </div>
+      <a href="/" class="logo">Bigmishka</a>
+      <!-- Toggle cart button -->
+      <div class="btn-toggle" id="cart-toggle"><i class="icomoon icon-bag2"></i></div>
+    </div>
+    <div class="menu-panel" id="burger-menu">
+      <form role="search" method="get" id="searchform" action="#" class="searchform form-group">
+        <input type="text" placeholder="Поиск" class="form-input" name="s" id="s">
+        <button class="btn-reset searchform-button"><i class="icomoon icon-zoom"></i></button>
+      </form>
+      <ul class="nav-list">
+        <li><a href="#">Новинки</a></li>
+        <li><a href="#">Краски</a></li>
+        <li><a href="#">PMU</a></li>
+        <li><a href="#">Картриджи</a></li>
+        <li><a href="#">Чистящие средства</a></li>
+        <li><a href="#">Аксессуары</a></li>
+        <li><a href="#">Мебель</a></li>
+        <li><a href="#">Оборудование</a></li>
+        <li><a href="#">Источники питания</a></li>
+      </ul>
+      <a href="rassrochka.html" class="green-link" data-text="Рассрочка">Рассрочка</a>
+      <a href="studiam-i-masteram.html" class="green-link" data-text="Студиям и мастерам">Студиям и мастерам</a>
+      <div class="header-contacts">
+        <a href="tel:+37255532754" class="header-link">+(372) 5553 2754</a>
+        <a href="mailto:order@mishka.ink" class="header-link">order@mishka.ink</a>
+      </div>
+      <div class="lang-toggles">
+        <div class="lang-item lang-active">EST</div>
+        <div class="lang-item">ENG</div>
+      </div>
+    </div>
+    <div class="menu-panel" id="cart-menu">
+      <div class="menu-list">
+        <div class="menu-item">
+          <a href="cart.html" class="menu-btn"><i class="icomoon icon-bag"></i>Корзина (6)</a>
+        </div>
+        <div class="menu-item">
+          <a href="favorites.html" class="menu-btn"><i class="icomoon icon-heart"></i>Избранное</a>
+        </div>
+        <div class="menu-item">
+          <a href="#" class="menu-btn to-state" data-state="login"><i class="icomoon icon-user"></i>Войти</a>
+        </div>
+      </div>
+    </div>
+  </div>
 </header>
 
 	<main>
@@ -314,13 +370,13 @@
         <div class="neon" data-text="Представляем бренды">Представляем бренды</div>
       </div>
     </div>
-    <div class="brands-grid">
-      <a href="https://tattoo-pharma.com/" target="_blank" class="col"><img src="img/brands/tattoo-pharma.png" alt=""></a>
-      <a href="https://jositattoo.com/" target="_blank" class="col"><img src="img/brands/josi.png" alt=""></a>
-      <a href="https://www.aitenitas.com/" target="_blank" class="col"><img src="img/brands/ai-tenitas.png" alt=""></a>
-      <a href="https://xtremeinks.com/" target="_blank" class="col"><img src="img/brands/xtreme.png" alt=""></a>
-      <a href="https://lt-tattooequipment.com/" target="_blank" class="col"><img src="img/brands/tattoo-equipment.png" alt=""></a>
-    </div>
+  </div>
+  <div class="brands-container">
+    <a href="https://tattoo-pharma.com/" target="_blank"><img src="img/brands/tattoo-pharma.png" alt=""></a>
+    <a href="https://jositattoo.com/" target="_blank"><img src="img/brands/josi.png" alt=""></a>
+    <a href="https://www.aitenitas.com/" target="_blank"><img src="img/brands/ai-tenitas.png" alt=""></a>
+    <a href="https://xtremeinks.com/" target="_blank"><img src="img/brands/xtreme.png" alt=""></a>
+    <a href="https://lt-tattooequipment.com/" target="_blank"><img src="img/brands/tattoo-equipment.png" alt=""></a>
   </div>
 </section>
 
@@ -529,7 +585,7 @@
 </section>
 
 		<section class="newsbl paralax">
-  <div class="container newsbl-container">
+  <div class="container default-container">
     <div class="heading">
       <div class="section-title">
         <div class="default">Вот что у нас</div>
@@ -592,12 +648,12 @@
 </section>
 
 		<section class="socbl paralax">
-  <div class="container socbl-container">
+  <div class="container default-container">
     <div class="heading">
       <div class="section-title">
         <div class="default">Все самое интересное</div>
         <span class="number">(8)</span>
-        <div class="neon" data-text="Показываем в Instagram">Показываем в Instagram</div>
+        <div class="neon" data-text="Показываем в Instagram">Показываем в&nbsp;Instagram</div>
       </div>
     </div>
     <a href="https://www.instagram.com/bigmishka_tattoosupply/" target="_blank" class="link-lg">Подписаться<i class="icomoon icon-arrow"></i></a>
@@ -615,7 +671,7 @@
 </section>
 
 		<section class="blogbl paralax">
-  <div class="container blogbl-container">
+  <div class="container default-container">
     <div class="heading">
       <div class="section-title">
         <span class="number">(9)</span>

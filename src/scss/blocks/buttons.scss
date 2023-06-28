@@ -146,6 +146,7 @@
 	align-items: center;
 	justify-content: center;
 	text-align: center;
+	position: relative;
 	width: 40px;
 	height: 40px;
 	outline: none;
@@ -153,6 +154,7 @@
   background: none;
 	transition: .3s ease;
 	cursor: pointer;
+	z-index: 1;
   i {
     font-size: 26px;
     line-height: 1;
@@ -337,5 +339,26 @@
 		&:hover {
 			color: var(--red-color);
 		}
+	}
+}
+
+@include desktop {
+	.link-xl {
+		font-size: 30px;
+	}
+}
+
+@include tablet {
+	.link-xl {
+		font-size: 24px;
+	}
+	.green-link {
+		line-height: 1.1;
+	}
+}
+
+@include mobile {
+	.link-xl {
+		font-size: 20px;
 	}
 }

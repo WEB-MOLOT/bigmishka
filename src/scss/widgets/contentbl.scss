@@ -47,7 +47,7 @@
 .img-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 60px 36px;
+  gap: 60px var(--default-gap);
 }
 
 .page-404 {

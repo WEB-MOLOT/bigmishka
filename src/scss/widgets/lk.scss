@@ -86,7 +86,7 @@
   &-cards {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 36px;
+    gap: var(--default-gap);
   }
   &-card {
     display: flex;
@@ -94,7 +94,7 @@
     width: 100%;
     padding: 32px 30px;
     color: var(--black-color);
-    border-radius: 30px;
+    border-radius: var(--border-radius);
     background: var(--font-color);
     box-shadow: 5px 5px 20px 0px rgba(0, 0, 0, 0.25);
     &-icon {
@@ -249,7 +249,7 @@
   &-cards {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 60px 36px;
+    gap: 60px var(--default-gap);
   }
   .pagination-info {
     margin-top: 24px;

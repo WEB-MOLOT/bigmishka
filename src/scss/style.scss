@@ -32,6 +32,9 @@
   --grey-color: #8E8A83;
   --darkGrey-color: #4B4B4B;
   --grey-gradient: linear-gradient(135deg, rgba(41, 41, 41, 1) 0%, rgba(20, 20, 20, 1) 100%);
+
+  --border-radius: 30px;
+  --default-gap: 36px;
 }
 
 /***** Mixins *****/
@@ -65,6 +68,21 @@
 	-webkit-text-fill-color: var(--black-color);
 	text-fill-color: var(--black-color);
 	color: var(--black-color);
+}
+@mixin desktop {
+  @media screen and (max-width: 1190px) {
+    @content;
+  }
+}
+@mixin tablet {
+  @media screen and (max-width: 1024px) {
+    @content;
+  }
+}
+@mixin mobile {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
 }
 
 
@@ -124,6 +142,25 @@
 
 /***** Page (article) *****/
 // @import "page/content";
+
+
+@include tablet {
+  :root {
+    --border-radius: 20px;
+    --default-gap: 24px;
+  }
+}
+@include mobile {
+  :root {
+    --border-radius: 15px;
+    --default-gap: 20px;
+  }
+}
+@media screen and (max-width: 390px) {
+  :root {
+    --container-offset: 10px;
+  }
+}
 
 
 /***** ICONS *****/

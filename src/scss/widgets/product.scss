@@ -45,12 +45,12 @@
     position: relative;
     .swiper {
       max-width: 100%;
-      border-radius: 30px;
+      border-radius: var(--border-radius);
       z-index: 0;
       &-slide {
-        border-radius: 30px;
+        border-radius: var(--border-radius);
         img {
-          border-radius: 30px;
+          border-radius: var(--border-radius);
         }
       }
     }

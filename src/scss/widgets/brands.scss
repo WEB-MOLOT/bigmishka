@@ -11,6 +11,7 @@
     background-image: url('../img/sparks/sparks-brands.png');
     background-repeat: no-repeat;
     background-size: contain;
+    z-index: -1;
   }
   .heading {
     margin-bottom: 72px;
@@ -20,15 +21,77 @@
       margin-left: 50px;
     }
   }
-  &-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 36px;
-    .col {
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 var(--container-offset);
+    max-width: var(--container-width);
+    >a {
       display: flex;
       align-items: center;
       justify-content: center;
-      max-height: 90px;
+      &:not(:last-child) {
+        margin-right: 30px;
+      }
+      img {
+        max-height: 90px;
+      }
+    }
+  }
+}
+
+@include tablet {
+  .brands {
+    padding-bottom: 80px;
+    .heading {
+      margin-bottom: 60px;
+    }
+    .section-title {
+      .default {
+        margin-left: 36px;
+      }
+    }
+    &-container {
+      >a {
+        img {
+          max-height: 70px;
+        }
+      }
+    }
+  }
+}
+
+@include mobile {
+  .brands {
+    padding-bottom: 60px;
+    .heading {
+      margin-bottom: 48px;
+    }
+    &-container {
+      justify-content: flex-start;
+      padding-right: 0;
+      width: 100%;
+      max-width: none;
+      overflow-x: auto;
+      white-space: nowrap;
+      &::-webkit-scrollbar,
+      &::-webkit-scrollbar-thumb {
+        display: none;
+        width: 0;
+        height: 0;
+      }
+      >a {
+        flex-shrink: 0;
+        &:last-child {
+          margin-right: 20px;
+        }
+        img {
+          max-height: 44px;
+          min-height: 44px;
+        }
+      }
     }
   }
 }

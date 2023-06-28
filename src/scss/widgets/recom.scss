@@ -26,6 +26,78 @@
   &-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 60px 36px;
+    gap: 60px var(--default-gap);
+  }
+}
+
+@include desktop {
+  .recom {
+    &-grid {
+      row-gap: 48px;
+    }
+  }
+}
+
+@include tablet {
+  .recom {
+    .heading-row {
+      .section-text {
+        text-align: left;
+        margin-left: 0;
+        margin-top: 20px;
+      }
+    }
+    .section-title {
+      .neon {
+        margin-left: 36px;
+      }
+    }
+    &-container {
+      .recom-grid {
+        width: calc(50% - 20px);
+      }
+    }
+  }
+}
+
+@include mobile {
+  .recom {
+    // .heading-row {
+    //   .section-text {
+    //     text-align: right;
+    //     margin-left: 20px;
+    //     margin-top: 10px;
+    //   }
+    // }
+    &-container {
+      flex-direction: column-reverse;
+      justify-content: flex-start;
+      .recom-grid {
+        width: 100%;
+      }
+      .card-big {
+        width: 100%;
+        margin-bottom: 40px;
+      }
+    }
+    &-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 40px;
+    }
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .recom {
+    .section-title {
+      .neon {
+        margin-left: 20px;
+        font-size: 28px;
+      }
+      .default {
+        font-size: 23px;
+      }
+    }
   }
 }
