@@ -277,6 +277,624 @@
   }
 }
 
+.lk-card-third {
+  align-items: flex-end;
+  .btn-second-gold {
+    &:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+}
+.lk-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px 0;
+  width: 100%;
+  li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 0;
+    &:first-child {
+      padding-top: 0;
+    }
+    &:not(:last-child) {
+      border-bottom: 1px solid #DFDBD4;
+    }
+    .col {
+      width: calc(50% - 6px);
+      &:nth-child(1) {
+        font-size: 14px;
+        line-height: 1.2;
+        color: #000000;
+      }
+      &:nth-child(2) {
+        font-size: 16px;
+        line-height: 1.2;
+        color: #000000;
+        text-align: right;
+      }
+      &.fw-700 {
+        font-weight: 700;
+      }
+    }
+  }
+  &-second {
+    li {
+      padding: 10px 0;
+      flex-direction: column;
+      .col {
+        width: 100%;
+        &:not(:last-child) {
+          margin-bottom: 10px;
+        }
+        &:nth-child(1),
+        &:nth-child(2) {
+          width: 100%;
+          text-align: left;
+        }
+      }
+    }
+  }
+  &-third {
+    margin-bottom: 0;
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+    li {
+      padding: 3px 0;
+      &:not(:last-child) {
+        border-bottom: 0;
+      }
+    }
+  }
+}
+
 .mt-48 {
   margin-top: 48px;
+}
+
+
+@include tablet {
+  .lk {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    &-section {
+      &:not(:last-child) {
+        margin-bottom: 72px;
+      }
+    }
+    .heading {
+      .lk-title {
+        margin-bottom: 24px;
+      }
+    }
+    &-head {
+      margin-bottom: 50px;
+      // .lk-link {
+      //   margin-left: 16px;
+      //   text-align: right;
+      //   justify-content: flex-end;
+      // }
+      .lk-title {
+        margin-right: 0;
+      }
+      // .btn {
+      //   padding-left: 36px;
+      //   padding-right: 36px;
+      // }
+    }
+    &-title {
+      font-size: 30px;
+    }
+    &-text {
+      font-size: 18px;
+    }
+    &-method {
+      margin-bottom: 28px;
+      font-size: 14px;
+      font-weight: 400;
+      color: #000000;
+    }
+    &-link {
+      margin-top: 30px;
+      font-size: 16px;
+      justify-content: flex-start;
+      i {
+        font-size: 20px;
+      }
+      &-container {
+        .btn {
+          margin-top: 20px;
+          width: 100%;
+        }
+      }
+    }
+    &-main .lk-link {
+      justify-content: flex-end;
+    }
+    // &-cards {
+    //   grid-template-columns: repeat(3, 1fr);
+    // }
+    &-card {
+      padding: 26px 20px 26px 20px;
+      &-title {
+        margin-bottom: 15px;
+        font-size: 17px;
+      }
+      &-descr {
+        font-size: 16px;
+        &:not(:last-child) {
+          margin-bottom: 15px;
+        }
+        &-light {
+          font-size: 16px;
+          &:not(:last-child) {
+            margin-bottom: 15px;
+          }
+        }
+      }
+      &-second {
+        .lk-card-title {
+          font-weight: 700;
+        }
+    }
+    }
+    .heading-row {
+      justify-content: flex-start;
+      .lk-title {
+        width: 100%;
+        margin-bottom: 30px;
+      }
+      .lk-text {
+        width: 100%;
+      }
+    }
+    &-form {
+      &-title {
+        margin-bottom: 10px;
+        // min-height: 25px;
+        font-size: 17px;
+      }
+    }
+  }
+
+
+  // .table-style {
+  //   width: 100%;
+  //   border: none;
+  //   margin-bottom: 20px;
+  //   thead th {
+  //     padding: 15px 10px;
+  //     font-size: 20px;
+  //     font-weight: 500;
+  //     line-height: 1.22;
+  //     text-align: left;
+  //     color: var(--font-color);
+  //     border-bottom: 1px solid #ECE8E1;
+  //     &:nth-child(1) {
+  //       padding-left: 0;
+  //     }
+  //   }
+  //   tbody td {
+  //     padding: 30px 15px;
+  //     font-size: 17px;
+  //     font-weight: 400;
+  //     line-height: 1.22;
+  //     text-align: left;
+  //     color: var(--font-color);
+  //     border-bottom: 1px solid #454545;
+  //     &:nth-child(1) {
+  //       padding-left: 0;
+  //     }
+  //   }
+  //   .table-title {
+  //     margin-bottom: 10px;
+  //     display: block;
+  //     width: 100%;
+  //     color: var(--darkGrey-color);
+  //     text-transform: uppercase;
+  //   }
+  // }
+
+  // .zakaz-table {
+  //   thead th,
+  //   tbody td {
+  //     &:nth-child(1) {
+  //       width: 30%;
+  //     }
+  //     &:nth-child(2) {
+  //       width: 30%;
+  //     }
+  //     &:nth-child(3) {
+  //       width: 40%;
+  //     }
+  //   }
+  // }
+
+  // .zakaz-table-soderjanie {
+  //   thead th,
+  //   tbody td {
+  //     &:nth-child(1) {
+  //       width: 45%;
+  //     }
+  //   }
+  // }
+  // .soderjanie-itogo {
+  //   td {
+  //     &:nth-child(3) {
+  //       text-align: right;
+  //       font-weight: 700;
+  //     }
+  //     .item {
+  //       &:not(:last-child) {
+  //         margin-bottom: 24px;
+  //       }
+  //     }
+  //   }
+  //   &:last-child td {
+  //     border-bottom: 0;
+  //   }
+  // }
+
+  .favorites {
+    &-cards {
+      grid-template-columns: repeat(3, 1fr);
+      row-gap: 44px;
+    }
+    .pagination-info {
+			margin-top: 0;
+			margin-bottom: 16px;
+      text-align: center;
+    }
+  }
+
+  .row-3 {
+    flex-direction: column;
+    &>.col {
+      margin-right: 0;
+      width: 100%;
+      margin-bottom: 30px;
+      &>.row-1 {
+        &:not(:last-child) {
+          margin-bottom: 25px;
+        }
+      }
+    }
+  }
+
+  .mt-48 {
+    margin-top: 36px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .lk {
+    padding-top: 30px;
+    // &-section {
+    //   &:not(:last-child) {
+    //     margin-bottom: 72px;
+    //   }
+    // }
+    // .heading {
+    //   .lk-title {
+    //     margin-bottom: 24px;
+    //   }
+    // }
+    // &-head {
+      // .lk-link {
+      //   margin-left: 16px;
+      //   text-align: right;
+      //   justify-content: flex-end;
+      // }
+      // .btn {
+      //   padding-left: 36px;
+      //   padding-right: 36px;
+      // }
+    // }
+    &-text {
+      font-size: 16px;
+    }
+    // &-method {
+    //   font-weight: 500;
+    //   margin-bottom: 48px;
+    // }
+    &-cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    // &-card {
+      // padding: 26px 20px 26px 20px;
+    // }
+    // .heading-row {
+    //   display: flex;
+    //   align-items: flex-start;
+    //   justify-content: space-between;
+    //   width: 100%;
+    //   .lk-title {
+    //     width: calc(50% - 20px);
+    //   }
+    //   .lk-text {
+    //     width: calc(50% - 20px);
+    //   }
+    // }
+  }
+
+
+  // .table-style {
+  //   width: 100%;
+  //   border: none;
+  //   margin-bottom: 20px;
+  //   thead th {
+  //     padding: 15px 10px;
+  //     font-size: 20px;
+  //     font-weight: 500;
+  //     line-height: 1.22;
+  //     text-align: left;
+  //     color: var(--font-color);
+  //     border-bottom: 1px solid #ECE8E1;
+  //     &:nth-child(1) {
+  //       padding-left: 0;
+  //     }
+  //   }
+  //   tbody td {
+  //     padding: 30px 15px;
+  //     font-size: 17px;
+  //     font-weight: 400;
+  //     line-height: 1.22;
+  //     text-align: left;
+  //     color: var(--font-color);
+  //     border-bottom: 1px solid #454545;
+  //     &:nth-child(1) {
+  //       padding-left: 0;
+  //     }
+  //   }
+  //   .table-title {
+  //     margin-bottom: 10px;
+  //     display: block;
+  //     width: 100%;
+  //     color: var(--darkGrey-color);
+  //     text-transform: uppercase;
+  //   }
+  // }
+
+  // .zakaz-table {
+  //   thead th,
+  //   tbody td {
+  //     &:nth-child(1) {
+  //       width: 30%;
+  //     }
+  //     &:nth-child(2) {
+  //       width: 30%;
+  //     }
+  //     &:nth-child(3) {
+  //       width: 40%;
+  //     }
+  //   }
+  // }
+
+  // .zakaz-table-soderjanie {
+  //   thead th,
+  //   tbody td {
+  //     &:nth-child(1) {
+  //       width: 45%;
+  //     }
+  //   }
+  // }
+  // .soderjanie-itogo {
+  //   td {
+  //     &:nth-child(3) {
+  //       text-align: right;
+  //       font-weight: 700;
+  //     }
+  //     .item {
+  //       &:not(:last-child) {
+  //         margin-bottom: 24px;
+  //       }
+  //     }
+  //   }
+  //   &:last-child td {
+  //     border-bottom: 0;
+  //   }
+  // }
+
+  .favorites {
+    &-cards {
+      grid-template-columns: repeat(2, 1fr);
+      row-gap: 30px;
+    }
+    .pagination-info {
+			margin-bottom: 10px;
+    }
+  }
+
+  // .row-3 {
+  //   display: flex;
+  //   align-items: flex-start;
+  //   justify-content: flex-start;
+  //   flex-wrap: wrap;
+  //   width: 100%;
+  //   &>.col {
+  //     margin-right: 30px;
+  //     width: calc(33.333% - 24px);
+  //     &>.row-1 {
+  //       &:not(:last-child) {
+  //         margin-bottom: 34px;
+  //       }
+  //     }
+  //     &:nth-child(3n) {
+  //       margin-right: 0;
+  //     }
+  //   }
+  // }
+
+  // .mt-48 {
+  //   margin-top: 48px;
+  // }
+}
+
+
+@include mobile {
+  .lk {
+    // &-section {
+    //   &:not(:last-child) {
+    //     margin-bottom: 72px;
+    //   }
+    // }
+    // .heading {
+    //   .lk-title {
+    //     margin-bottom: 24px;
+    //   }
+    // }
+    // &-head {
+      // .lk-link {
+      //   margin-left: 16px;
+      //   text-align: right;
+      //   justify-content: flex-end;
+      // }
+      // .btn {
+      //   padding-left: 36px;
+      //   padding-right: 36px;
+      // }
+    // }
+    &-text {
+      font-size: 16px;
+    }
+    // &-method {
+    //   font-weight: 500;
+    //   margin-bottom: 48px;
+    // }
+    &-cards {
+      grid-template-columns: repeat(1, 1fr);
+    }
+    &-card {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+    // .heading-row {
+    //   display: flex;
+    //   align-items: flex-start;
+    //   justify-content: space-between;
+    //   width: 100%;
+    //   .lk-title {
+    //     width: calc(50% - 20px);
+    //   }
+    //   .lk-text {
+    //     width: calc(50% - 20px);
+    //   }
+    // }
+  }
+
+
+  // .table-style {
+  //   width: 100%;
+  //   border: none;
+  //   margin-bottom: 20px;
+  //   thead th {
+  //     padding: 15px 10px;
+  //     font-size: 20px;
+  //     font-weight: 500;
+  //     line-height: 1.22;
+  //     text-align: left;
+  //     color: var(--font-color);
+  //     border-bottom: 1px solid #ECE8E1;
+  //     &:nth-child(1) {
+  //       padding-left: 0;
+  //     }
+  //   }
+  //   tbody td {
+  //     padding: 30px 15px;
+  //     font-size: 17px;
+  //     font-weight: 400;
+  //     line-height: 1.22;
+  //     text-align: left;
+  //     color: var(--font-color);
+  //     border-bottom: 1px solid #454545;
+  //     &:nth-child(1) {
+  //       padding-left: 0;
+  //     }
+  //   }
+  //   .table-title {
+  //     margin-bottom: 10px;
+  //     display: block;
+  //     width: 100%;
+  //     color: var(--darkGrey-color);
+  //     text-transform: uppercase;
+  //   }
+  // }
+
+  // .zakaz-table {
+  //   thead th,
+  //   tbody td {
+  //     &:nth-child(1) {
+  //       width: 30%;
+  //     }
+  //     &:nth-child(2) {
+  //       width: 30%;
+  //     }
+  //     &:nth-child(3) {
+  //       width: 40%;
+  //     }
+  //   }
+  // }
+
+  // .zakaz-table-soderjanie {
+  //   thead th,
+  //   tbody td {
+  //     &:nth-child(1) {
+  //       width: 45%;
+  //     }
+  //   }
+  // }
+  // .soderjanie-itogo {
+  //   td {
+  //     &:nth-child(3) {
+  //       text-align: right;
+  //       font-weight: 700;
+  //     }
+  //     .item {
+  //       &:not(:last-child) {
+  //         margin-bottom: 24px;
+  //       }
+  //     }
+  //   }
+  //   &:last-child td {
+  //     border-bottom: 0;
+  //   }
+  // }
+
+  // .favorites {
+  //   &-cards {
+  //     display: grid;
+  //     grid-template-columns: repeat(4, 1fr);
+  //     gap: 60px var(--default-gap);
+  //   }
+  //   .pagination-info {
+  //     margin-top: 24px;
+  //     text-align: right;
+  //   }
+  // }
+
+  // .row-3 {
+  //   display: flex;
+  //   align-items: flex-start;
+  //   justify-content: flex-start;
+  //   flex-wrap: wrap;
+  //   width: 100%;
+  //   &>.col {
+  //     margin-right: 30px;
+  //     width: calc(33.333% - 24px);
+  //     &>.row-1 {
+  //       &:not(:last-child) {
+  //         margin-bottom: 34px;
+  //       }
+  //     }
+  //     &:nth-child(3n) {
+  //       margin-right: 0;
+  //     }
+  //   }
+  // }
+
+  // .mt-48 {
+  //   margin-top: 48px;
+  // }
 }

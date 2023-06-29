@@ -769,6 +769,38 @@ input[type="number"]::-webkit-inner-spin-button {
 			}
 		}
 	}
+	.select2 {
+		height: 50px;
+	}
+	.select2-selection__rendered,
+	.select2-container .select2-selection--single {
+		padding-right: 30px;
+		height: 50px;
+		font-size: 15px;
+		line-height: 18px;
+		border-radius: 5px;
+	}
+	.select2-container .select2-selection--single .select2-selection__rendered {
+    font-size: 15px;
+    line-height: 18px;
+		padding: 17px 15px 16px 15px;
+		border-radius: 5px;
+	}
+	.select2-container--default .select2-selection--single .select2-selection__arrow {
+		width: 12px;
+		height: 12px;
+		right: 18px;
+		&::before {
+			font-size: 12px;
+		}
+	}
+	.select2-dropdown {
+		font-size: 15px !important;
+		border-radius: 0px 0px 5px 5px !important;
+	}
+	.select2-results__option {
+		padding: 5px 7px;
+	}
 	.woocommerce-ordering {
 		max-width: calc(100% - 140px - 20px);
 		.select2 {
