@@ -36,3 +36,55 @@
     margin-top: 70px;
   }
 }
+
+@include tablet {
+  .prodinfobl {
+    background-size: 40% auto;
+    .title-m2 {
+      margin-bottom: 10px;
+    }
+    .section-text {
+      font-size: 16px;
+    }
+    &-container {
+      .col {
+        &:nth-child(2) {
+          width: calc(48% - 20px);
+        }
+      }
+    }
+  }
+  .prodfaq .title-m2 {
+    margin-bottom: 24px;
+  }
+}
+
+@include mobile {
+  .prodinfobl {
+    &-container {
+      justify-content: flex-start;
+      flex-direction: column;
+      .col {
+        &:nth-child(1) {
+          width: 100%;
+          margin-bottom: 40px;
+        }
+        &:nth-child(2) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .prodfaq {
+    .accordion {
+      .accordion-item {
+        &:nth-child(n+4) {
+          display: none;
+        }
+        &.is-visible {
+          display: block;
+        }
+      }
+    }
+  }
+}

@@ -25,3 +25,35 @@
     }
   }
 }
+
+@include tablet {
+  .complectbl {
+    .card {
+      .btn-favorites {
+        display: none;
+      }
+    }
+    &-container {
+      justify-content: flex-start;
+      flex-direction: column;
+      .heading {
+        margin-top: 0;
+        width: 100%;
+        .section-title {
+          .neon {
+            margin-left: 30px;
+          }
+        }
+      }
+      .complectblSwiper {
+        width: 100%;
+      }
+    }
+    &Swiper {
+      .swiper-nav {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+

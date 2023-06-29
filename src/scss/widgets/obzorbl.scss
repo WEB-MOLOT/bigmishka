@@ -11,5 +11,27 @@
   .heading {
     width: calc(41% - 20px);
   }
-  
+}
+
+@include tablet {
+  .obzorbl {
+    .heading {
+      width: calc(48% - 20px);
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .obzorbl {
+    &-container {
+      flex-direction: column-reverse;
+    }
+    .video {
+      width: 100%;
+    }
+    .heading {
+      width: 100%;
+      margin-bottom: 30px;
+    }
+  }
 }

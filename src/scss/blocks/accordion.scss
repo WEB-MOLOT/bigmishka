@@ -75,22 +75,24 @@
   }
 }
 
-// @include mobile {
-//   .accordion-item {
-//     padding: 16px;
-//     &:not(:last-child) {
-//       margin-bottom: 14px;
-//     }
-//   }
-//   .accordion-content {
-//     p {
-//       font-size: 16px;
-//     }
-//   }
-//   .accordion-open {
-//     .accordion-content {
-//       margin-top: 8px;
-//       margin-bottom: 8px;
-//     }
-//   }
-// }
+@include mobile {
+  .accordion-item {
+    padding-right: 0;
+  }
+  .accordion-title,
+  .accordion-title h3 {
+    width: 100%;
+    font-size: 16px;
+  }
+  .accordion-button {
+    width: 20px;
+    height: 20px;
+  }
+  .accordion-content {
+    p {
+      font-size: 16px;
+      width: 100%;
+    }
+  }
+}
+

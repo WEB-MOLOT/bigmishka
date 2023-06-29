@@ -1,0 +1,409 @@
+<section class="catalog">
+  <div class="container">
+    <div class="heading">
+      <div class="section-title">
+        <div class="neon" data-text="Каталог">Каталог</div>
+      </div>
+    </div>
+    <div class="catalog-head">
+      <div class="kama_breadcrumbs">
+        <span><a href="index.html"><span>Главная</span></a></span>
+        <span class="kb_sep"><i class="icomoon icon-chevron"></i></span>
+        <span class="kb_title">Все товары</span>
+      </div>
+      <form class="woocommerce-ordering" method="get">
+        <select name="orderby" id="orderby" class="orderby js-example-basic-single">
+          <option value="priceIncrease" selected="selected">Цена по возрастанию</option>
+          <option value="priceDescending">Цена по убыванию</option>
+          <option value="new">По новизне</option>
+          <option value="discount">По скидке</option>
+        </select>
+      </form>
+      <div class="catSidebar-btn" id="catSidebarToggle">Фильтры</div>
+    </div>
+    <div class="catalog-container">
+      <div class="catSidebar" id="catSidebar">
+        <div class="catSidebar-header">
+          Фильтры
+          <div class="btn-toggle" id="catSidebarClose"><i class="icomoon icon-close"></i></div>
+        </div>
+        <div class="catSidebar-item">
+          <h4 class="catSidebar-title">Категории</h4>
+          <div class="catSidebar-group">
+            <div class="catSidebar-values">
+              <ul class="catSidebar-list">
+                <li><a href="#">Все</a></li>
+                <li><a href="#">Новинки</a></li>
+                <li><a href="catalog-kraski.html">Краски</a></li>
+                <li><a href="#">Картриджи</a></li>
+                <li><a href="#">Чистящие средства</a></li>
+                <li><a href="#">Аксессуары</a></li>
+                <li><a href="#">Мебель</a></li>
+                <li><a href="#">Оборудование</a></li>
+                <li><a href="#">Источники питания</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="catSidebar-item">
+          <h4 class="catSidebar-title">Наличие</h4>
+          <div class="catSidebar-group">
+            <div class="catSidebar-values">
+              <label for="nalichie" class="checkbox">
+                <input type="checkbox" id="nalichie"><span>Только в наличии</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="catSidebar-item">
+          <h4 class="catSidebar-title">Цена</h4>
+          <div class="catSidebar-group">
+            <div class="catSidebar-values">
+              <div class="catSidebar-price">
+                <div class="form-group">
+                  <label for="" class="form-label">
+                    <div class="wallet">€</div>
+                    <input type="number" class="form-input" min="0,00" placeholder="0,00">
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label for="" class="form-label">
+                    <div class="wallet">€</div>
+                    <input type="number" class="form-input" max="9999,00" placeholder="9999,00">
+                  </label>
+                </div>
+              </div>
+              <div class="range">
+                <div class="range-button range-button-min"></div>
+                <div class="range-line"></div>
+                <div class="range-button range-button-max"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="catSidebar-item">
+          <h4 class="catSidebar-title">Бренд</h4>
+          <div class="catSidebar-group">
+            <div class="catSidebar-values">
+              <label for="brandAll" class="checkbox"><input type="checkbox" id="brandAll"><span>Все</span></label>
+              <label for="brand1" class="checkbox"><input type="checkbox" id="brand1"><span>Бренд 1</span></label>
+              <label for="brand2" class="checkbox"><input type="checkbox" id="brand2"><span>Бренд 2</span></label>
+              <label for="brand3" class="checkbox"><input type="checkbox" id="brand3"><span>Бренд 3</span></label>
+              <label for="brand4" class="checkbox"><input type="checkbox" id="brand4"><span>Бренд 4</span></label>
+              <label for="brand5" class="checkbox"><input type="checkbox" id="brand5"><span>Бренд 5</span></label>
+              <label for="brand6" class="checkbox"><input type="checkbox" id="brand6"><span>Бренд 6</span></label>
+              <label for="brand7" class="checkbox"><input type="checkbox" id="brand7"><span>Бренд 7</span></label>
+            </div>
+            <button class="btn-reset show-more">Больше...</button>
+          </div>
+        </div>
+      </div>
+      <div class="catalog-right">
+        <div class="catalog-cards">
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <div class="card-nalichie">Нет на складе</div>
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <div class="card-nalichie">Нет на складе</div>
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <div class="card-nalichie">Нет на складе</div>
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <div class="card-nalichie">Нет на складе</div>
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+
+              <div class="card-nalichie">Нет на складе</div>
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+              </div>
+            </div>
+          </a>
+          <a href="product.html" class="card">
+            <div class="card-img-wrapper">
+              <div class="card-discount"><img src="img/discount.svg" alt=""></div>
+
+              <img src="img/prod-img.jpg" class="card-img" alt="">
+            </div>
+            <div class="card-info">
+              <h3 class="card-name">Название товара</h3>
+              <div class="card-text">Краткое описание. Lorem ipsum dolor sit amet</div>
+              <div class="card-price">
+                <div class="current">€100</div>
+                <div class="old">€150</div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <!------ pagination ------>
+        <div class="pagination">
+          <div class="nav-links">
+            <a href="#" class="prev disabled"><i class="icomoon icon-arrow-big"></i></a>
+            <div class="nav-links-numbers">
+              <a href="#" class="page-numbers">1</a>
+              <span class="page-numbers current">2</span>
+              <a href="#" class="page-numbers">3</a>
+              <span class="page-numbers dots">...</span>
+              <a href="#" class="page-numbers">8</a>
+              <a href="#" class="page-numbers">9</a>
+              <a href="#" class="page-numbers">10</a>
+            </div>
+            <a href="#" class="next"><i class="icomoon icon-arrow-big"></i></a>
+          </div>
+          <div class="pagination-info">Показано товаров: 13-24 из 50</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

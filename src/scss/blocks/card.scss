@@ -169,6 +169,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 10px;
     .current {
       font-style: italic;
@@ -370,6 +371,60 @@
 
 
 @include tablet {
+  .card {
+    &-price {
+      &-wrapper {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        row-gap: 15px;
+        .card-price {
+          margin-right: 0;
+        }
+      }
+      // &-info {
+      //   display: inline-flex;
+      //   align-items: center;
+      //   justify-content: flex-start;
+      //   padding: 5px 6px;
+      //   color: var(--font-color);
+      //   font-size: 14px;
+      //   text-transform: uppercase;
+      //   border-radius: 8px;
+      //   border: 1px solid #C9A869;
+      //   background: linear-gradient(135deg, #292929 0%, #141414 100%);
+      //   img {
+      //     width: 16px;
+      //     height: 16px;
+      //     margin-right: 6px;
+      //   }
+      // }
+    }
+    &-charact {
+      margin-top: 26px;
+      .group {
+        margin-bottom: 26px;
+        .title {
+          font-size: 16px;
+        }
+        .col {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          &:not(:last-child) {
+            margin-right: 0;
+          }
+          .btn-oneklick {
+            margin-top: 16px;
+            position: relative;
+            left: auto;top: auto;
+            transform: none;
+          }
+        }
+      }
+    }
+  }
+
   .blcard {
     min-height: 400px;
   }
@@ -381,6 +436,57 @@
 
 
 @include mobile {
+  .card {
+    &-nalichie {
+      font-size: 12px;
+    }
+    &-name {
+      margin-bottom: 7px;
+      font-size: 15px;
+    }
+    &-text {
+      margin-bottom: 10px;
+      font-size: 12px;
+    }
+    &-price {
+      gap: 7px;
+      .current {
+        font-size: 16px;
+      }
+      .old {
+        font-size: 16px;
+      }
+      &-info {
+        font-size: 12px;
+      }
+    }
+    &-charact {
+      .group {
+        .col {
+          width: 100%;
+          .btn, .btn-oneklick {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+  .product-slider .card-discount,
+  .card-discount {
+    top: 7px;
+    left: 7px;
+  }
+
+  // .card-big .card-img-wrapper,
+  // .product-slider {
+  //     .card-discount {
+  //       top: 20px;
+  //       left: 20px;
+  //       width: 40px;
+  //       height: 40px;
+  //     }
+  // }
+
   .blcard {
     padding: 22px 20px 20px 20px;
     min-height: 400px;

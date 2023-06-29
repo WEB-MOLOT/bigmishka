@@ -139,3 +139,70 @@
 .to-state {
 	cursor: pointer;
 }
+
+@media screen and (max-width: 1440px) {
+	.state .state-box {
+		margin-top: 90px;
+	}
+}
+
+@include tablet {
+	/*------ modal ------*/
+	.state {
+		&.active {
+			background: rgba(0, 0, 0, 0.8);
+		}
+		.state-box {
+			margin-top: 80px;
+			margin-bottom: 40px;
+			max-width: calc(100% - 20px);
+			.close {
+				position: fixed;
+				top: 10px;
+				right: 10px;
+			}
+			.form {
+				&-group {
+					a {
+						display: block;
+						width: 100%;
+						margin-top: 5px;
+						text-align: right;
+					}
+					.form-input {
+						min-width: auto;
+						width: 100%;
+						margin-right: 0;
+					}
+				}
+			}
+		}
+	}
+}
+
+@include mobile {
+	/*------ modal ------*/
+	.state {
+		.state-box {
+			padding: 25px 10px;
+			.form {
+				.link-lg {
+					margin-top: 20px;
+				}
+			}
+			.button-close {
+				font-size: 15px;
+				width: 100%;
+				text-align: right;
+			}
+			.widget-title {
+				margin-bottom: 30px;
+				font-size: 20px;
+			}
+			.widget-text {
+				margin-bottom: 20px;
+				font-size: 16px;
+			}
+		}
+	}
+}

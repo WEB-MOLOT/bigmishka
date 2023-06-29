@@ -9,6 +9,37 @@
     justify-content: space-between;
     width: 100%;
   }
+  &-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 14px;
+    .swiper-pagination {
+      position: relative;
+      left: auto;top: auto;right: auto;bottom: auto;
+      width: calc(50% - 8px);
+      text-align: left;
+    }
+  }
+  &-btns {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: calc(50% - 8px);
+    button {
+      font-size: 34px;
+      &:not(:first-child) {
+        margin-left: 18px;
+      }
+      &.active {
+        color: var(--red-color);
+        i {
+          color: var(--red-color);
+        }
+      }
+    }
+  }
   &-info {
     padding-bottom: 30px;
     width: calc(50% - 20px);
@@ -162,7 +193,7 @@
     margin-left: 20px;
     .btn {
       padding-left: 36px;
-      padding-left: 36px;
+      padding-right: 36px;
       box-shadow: 5px 5px 20px 0px rgba(144, 87, 31, 0.40);
     }
     .btn-remove {
@@ -175,4 +206,175 @@
       color: var(--red-color);
     }
   }
+}
+
+@include tablet {
+  .message {
+    padding: 16px 14px;
+    font-size: 16px;
+    &bl {
+      padding: 10px 0;
+    }
+    // &.green {
+    //   padding-top: 12px;
+    //   padding-bottom: 12px;
+    // }
+    &-head {
+      i {
+        margin-right: 10px;
+      }
+    }
+    &-info {
+      padding-left: 26px;
+      font-size: 13px;
+    }
+    &-right {
+      .btn-remove {
+        margin-left: 24px;
+      }
+    }
+  }
+  .product {
+    .kama_breadcrumbs {
+      margin-bottom: 30px;
+    }
+    &-container {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 600px;
+      justify-content: flex-start;
+      flex-direction: column-reverse;
+    }
+
+    &-info {
+      margin-top: 36px;
+      padding-bottom: 0;
+      width: 100%;
+      .card-name {
+        font-size: 28px;
+      }
+      .card-text {
+        margin-bottom: 10px;
+      }
+      .card-articul {
+        display: none;
+      }
+      .card-price {
+        .current {
+          font-size: 32px;
+          font-weight: 300;
+        }
+        .old {
+          position: relative;
+          padding-left: 20px;
+          font-size: 24px;
+          font-weight: 300;
+          &::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 16px;
+            height: 16px;
+            background-image: url('../img/discount.svg');
+            background-repeat: no-repeat;
+            background-size: contain;
+          }
+        }
+      }
+    }
+    &-slider {
+      width: 100%;
+    }
+  }
+}
+
+@include mobile {
+  .message {
+    // align-items: center;
+    // justify-content: space-between;
+    position: relative;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-direction: column;
+    padding: 12px 10px;
+    &bl {
+      padding: 5px 0;
+    }
+    // &.green {
+    //   padding-top: 12px;
+    //   padding-bottom: 12px;
+    // }
+    &-head {
+      i {
+        display: none;
+      }
+    }
+    &-info {
+      padding-left: 0;
+      font-size: 12px;
+    }
+    &-left {
+      width: calc(100% - 20px);
+    }
+    &-right {
+      margin-left: 0;
+      margin-top: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      width: 100%;
+      .btn {
+        width: 100%;
+      }
+      .btn-remove {
+        margin-left: 0;
+        position: absolute;
+        top: 12px;
+        right: 10px;
+      }
+    }
+  }
+  .product {
+    .kama_breadcrumbs {
+      margin-bottom: 20px;
+    }
+    &-info {
+      .card-name {
+        font-size: 18px;
+      }
+      .card-text {
+        font-size: 16px;
+      }
+      .card-price {
+        .current {
+          font-size: 26px;
+        }
+        .old {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+.load-more,
+.read-more__link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 1.25;
+  color: var(--font-color);
+  cursor: pointer;
+}
+.read-more.is-inline,
+.read-more.is-inline p,
+.read-more.is-inline+span {
+  display: inline;
+}
+.read-more.is-inline+span {
+  margin-left: 0.25em
+}
+
+.load-more {
+  margin-top: 30px;
 }

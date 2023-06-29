@@ -31,3 +31,69 @@
     }
   }
 }
+
+@media screen and (max-width: 1190px) {
+  .formbl {
+    .default-wrapper {
+      padding: 40px 40px 50px 40px;
+    }
+  }
+}
+
+@include tablet {
+  .formbl {
+    &-container {
+      justify-content: flex-start;
+      flex-direction: column;
+      .heading {
+        width: 100%;
+        .section-text {
+          margin-top: 36px;
+          max-width: 100%;
+        }
+      }
+      .col {
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include mobile {
+  .formbl {
+    .default-wrapper {
+      padding: 25px 14px 30px 14px;
+    }
+    .section-title {
+      .neon {
+        margin-left: 35px;
+      }
+      .default {
+        margin-left: 10px;
+      }
+    }
+    &-container {
+      .heading {
+        .section-text {
+          margin-top: 30px;
+          font-size: 16px;
+        }
+      }
+      .col {
+        .title-m2 {
+          font-size: 16px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .form-bl {
+    .default-wrapper {
+      margin-right: -5px;
+      margin-left: -5px;
+      width: calc(100% + 10px);
+    }
+  }
+}
