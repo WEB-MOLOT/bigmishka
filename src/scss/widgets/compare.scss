@@ -44,3 +44,21 @@
     }
   }
 }
+
+@include tablet {
+  .compare {
+    &-table {
+      overflow-x: auto;
+      .table-style {
+        width: max-content;
+        thead th,
+        tbody td {
+          width: 210px;
+          max-width: 210px;
+          flex-shrink: 0;
+          padding: 15px 10px !important;
+        }
+      }
+    }
+  }
+}

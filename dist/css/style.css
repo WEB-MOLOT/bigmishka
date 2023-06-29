@@ -6974,6 +6974,21 @@ input[type=number]::-webkit-inner-spin-button {
   padding-left: 10px;
 }
 
+@media screen and (max-width: 1024px) {
+  .compare-table {
+    overflow-x: auto;
+  }
+  .compare-table .table-style {
+    width: max-content;
+  }
+  .compare-table .table-style thead th,
+.compare-table .table-style tbody td {
+    width: 210px;
+    max-width: 210px;
+    flex-shrink: 0;
+    padding: 15px 10px !important;
+  }
+}
 .cart {
   padding-bottom: 80px;
 }
